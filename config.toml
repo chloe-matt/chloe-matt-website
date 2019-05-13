@@ -5,6 +5,30 @@ theme = "chloematt"
 
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
+googleAnalytics = "UA-134825322-1"
+
+[privacy]
+  [privacy.disqus]
+    disable = false
+  [privacy.googleAnalytics]
+    anonymizeIP = false
+    disable = false
+    respectDoNotTrack = false
+    useSessionStorage = false
+  [privacy.instagram]
+    disable = false
+    simple = false
+  [privacy.twitter]
+    disable = false
+    enableDNT = false
+    simple = false
+  [privacy.vimeo]
+    disable = false
+    simple = false
+  [privacy.youtube]
+    disable = false
+    privacyEnhanced = false
+
 [params]
 
   [params.navbarlogo]
