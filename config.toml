@@ -1,12 +1,12 @@
 baseURL = "https://chloematt.com/"
 languageCode = "en-gb"
-title = "My New Hugo Site"
+title = "Digital Product Strategy and Development Firm"
 theme = "chloematt"
 
 [params]
 
   [params.navbarlogo]
-  image = "logos/fresh.svg"
+  image = "logos/cm_logotype_light.png"
   link = "/"
 
   [params.font]
@@ -17,258 +17,86 @@ theme = "chloematt"
   ]
 
   [params.hero]
-  title = "Manage. Deploy."
-  subtitle = "Lorem ipsum sit dolor amet is dummy text used by the typography industry"
-  buttontext = "Get started"
+  title = "Innovation & Values"
+  subtitle = "Chloe & Matt is a digital product strategy and development firm helping companies to innovate through collaboration. We help your company to build digital products and services by combining customer research and insights to bring great impacts."
+  buttontext = "Download Company Profile"
   buttonlink = "#"
-  image = "illustrations/worker.svg"
-  clientlogos = [
-    "systek",
-    "tribe",
-    "kromo",
-    "infinite",
-    "gutwork"
-  ]
-
-  [params.sidebar]
-  logo = "fresh-square"
-
-    [[params.sidebar.sections]]
-    title = "User"
-    icon = "user"
-
-      [[params.sidebar.sections.links]]
-      text = "Profile"
-      url = "/"
-
-      [[params.sidebar.sections.links]]
-      text = "Account"
-      url = "/"
-
-      [[params.sidebar.sections.links]]
-      text = "Settings"
-      url = "/"
-
-    [[params.sidebar.sections]]
-    title = "Messages"
-    icon = "envelope"
-
-      [[params.sidebar.sections.links]]
-      text = "Inbox"
-      url = "/"
-
-      [[params.sidebar.sections.links]]
-      text = "Compose"
-      url = "/"
-
-    [[params.sidebar.sections]]
-    title = "Images"
-    icon = "image"
-
-      [[params.sidebar.sections.links]]
-      text = "Library"
-      url = "/"
-
-      [[params.sidebar.sections.links]]
-      text = "Upload"
-      url = "/"
-
-    [[params.sidebar.sections]]
-    title = "Settings"
-    icon = "cog"
-
-      [[params.sidebar.sections.links]]
-      text = "User settings"
-      url = "/"
-
-      [[params.sidebar.sections.links]]
-      text = "App settings"
-      url = "/"
+  image = "illustrations/CM-coinnovation.svg"
+  clientlogos = []
 
   [params.section1]
-  title = "Great power comes"
-  subtitle = "with great responsibility"
+  title = "What We Do"
+  subtitle = "Our services to help you achieve the goal."
 
     [[params.section1.tiles]]
-    title = "App builder"
+    title = "Web Development"
     icon = "mouse-globe"
-    text = "This is some explanatory text that is on two rows"
+    text = "From static to dynamic web development in PHP and JS."
     url = "/"
-    buttonText = "Free trial"
+    buttonText = "Contact Us"
 
     [[params.section1.tiles]]
-    title = "Cloud integration"
+    title = "Mobile App Development"
     icon = "laptop-cloud"
-    text = "This is some explanatory text that is on two rows"
+    text = "Cross-platform development with React Native."
     url = "/"
-    buttonText = "Get started"
+    buttonText = "Contact Us"
 
     [[params.section1.tiles]]
-    title = "Add-ons & plugins"
+    title = "Managed Service"
     icon = "plug-cloud"
-    text = "This is some explanatory text that is on two rows"
+    text = "Maintain your digital infrastructures."
     url = "/"
-    buttonText = "Get started"
+    buttonText = "Contact Us"
 
   [params.section2]
-  title = "You're here because you want the best"
-  subtitle = "And we know it"
+  title = "The Playbook"
+  subtitle = "The typical timeframe while working with us."
 
     [[params.section2.features]]
-    title = "Powerful and unified interface"
-    text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis."
-    icon = "laptop-globe"
+    title = "Customer Interview"
+    text = "The first step before we start doing the development. The output of this process is getting customers insight and value propositions."
+    icon = "playbook-CI"
 
     [[params.section2.features]]
-    title = "Cross-device synchronisation"
-    text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis."
-    icon = "doc-sync"
+    title = "Sprint-Up"
+    text = "Start building the interactive prototype, product identities, and product features."
+    icon = "playbook-DS"
 
     [[params.section2.features]]
-    title = "Nomad system"
-    text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis."
-    icon = "mobile-feed"
+    title = "Agile Development"
+    text = "The process of designing and developing your digital product."
+    icon = "playbook-AD"
 
-  [params.section3]
-  title = "One platform"
-  subtitle = "To rule them all"
-  image = "illustrations/mockups/app-mockup.png"
-  buttonText = "Get started"
-  buttonLink = "#"
+    [[params.section2.features]]
+    title = "Product Testing"
+    text = "The testing phase before releasing the product to the market."
+    icon = "playbook-PT"
 
-  [params.section4]
-  title = "Our Clients love us!"
-  subtitle = "Lorem ipsum sit dolor amet is a dummy text used by typography industry"
-
-    [[params.section4.clients]]
-    name = "Irma Walters"
-    quote = "Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at."
-    job = "Accountant"
-    img = 1.0
-
-    [[params.section4.clients]]
-    name = "John Bradley"
-    quote = "Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at."
-    job = "Financial Analyst"
-    img = 2.0
-
-    [[params.section4.clients]]
-    name = "Gary Blackman"
-    quote = "Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at."
-    job = "HR Manager"
-    img = 3.0
+  [params.section5]
+  title = "Contact"
 
   [params.footer]
-  logo = "fresh-white-alt.svg"
-  bulmalogo = true
-
-    [params.footer.quicklinks]
-
-      [params.footer.quicklinks.column1]
-      title = "Product"
-
-        [[params.footer.quicklinks.column1.links]]
-        text = "Discover features"
-        link = "/"
-
-        [[params.footer.quicklinks.column1.links]]
-        text = "Why choose our product?"
-        link = "/"
-
-        [[params.footer.quicklinks.column1.links]]
-        text = "Compare features"
-        link = "/"
-
-        [[params.footer.quicklinks.column1.links]]
-        text = "Our roadmap"
-        link = "/"
-
-        [[params.footer.quicklinks.column1.links]]
-        text = "Request features"
-        link = "/"
-
-      [params.footer.quicklinks.column2]
-      title = "Docs"
-
-        [[params.footer.quicklinks.column2.links]]
-        text = "Get started"
-        link = "/"
-
-        [[params.footer.quicklinks.column2.links]]
-        text = "User guides"
-        link = "/"
-
-        [[params.footer.quicklinks.column2.links]]
-        text = "Admin guide"
-        link = "/"
-
-        [[params.footer.quicklinks.column2.links]]
-        text = "Developers"
-        link = "/"
-
-      [params.footer.quicklinks.column3]
-      title = "Blog"
-
-        [[params.footer.quicklinks.column3.links]]
-        text = "Latest news"
-        link = "/"
-
-        [[params.footer.quicklinks.column3.links]]
-        text = "Tech articles"
-        link = "/"
-
-        [[params.footer.quicklinks.column3.links]]
-        text = "Video blog"
-        link = "/"
+  logo = "cm_color.png"
+  bulmalogo = false
 
     [[params.footer.socialmedia]]
-    link = "https://github.com/lucperkins/github-fresh"
+    link = "https://www.instagram.com/chloenmatt/"
+    icon = "instagram"
+
+    [[params.footer.socialmedia]]
+    link = "https://github.com/chloe-matt"
     icon = "github"
 
-    [[params.footer.socialmedia]]
-    link = "https://dribbble.com/#"
-    icon = "dribbble"
-
-    [[params.footer.socialmedia]]
-    link = "https://facebook.com/#"
-    icon = "facebook"
-
-    [[params.footer.socialmedia]]
-    link = "https://twitter.com/lucperkins"
-    icon = "twitter"
-
-    [[params.footer.socialmedia]]
-    link = "https://bitbucket.org/#"
-    icon = "bitbucket"
-
   [[params.navbar]]
-  title = "Features"
+  title = "Services"
   url = "/"
 
   [[params.navbar]]
-  title = "Pricing"
+  title = "About Us"
   url = "/"
 
   [[params.navbar]]
-  title = "Dropdown"
-
-    [[params.navbar.sublinks]]
-    title = "Dropdown item"
-    url = "/"
-
-    [[params.navbar.sublinks]]
-    title = "Dropdown item"
-    url = "/"
-
-    [[params.navbar.sublinks]]
-    title = "Dropdown item"
-    url = "/"
-
-  [[params.navbar]]
-  title = "Log in"
+  title = "Contact"
   url = "/"
-
-  [[params.navbar]]
-  title = "Sign up"
-  url = "/"
-  button = true
+  button = false

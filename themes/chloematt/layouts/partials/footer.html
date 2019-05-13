@@ -3,12 +3,21 @@
 {{- $quickLinks  := index $footer "quicklinks" }}
 {{- $socialMedia := index $footer "socialmedia" }}
 {{- $bulmaLogo   := index $footer "bulmalogo" }}
-<footer class="footer footer-dark">
+<footer class="footer footer-dark" style="background-color: #141416;">
   <div class="container">
     <div class="columns">
       <div class="column">
         <div class="footer-logo">
           <img src="{{ printf "/images/logos/%s" $logo | relURL }}">
+          <p><small>A brand under Tanibox OÜ</small></p>
+          <p><small>Reg. code: 14305217</small></p>
+          <p>
+            <small>
+              Narva mnt. 5, 10117, Tallinn
+              <br>
+              Estonia
+            </small>
+          </p>
         </div>
       </div>
       {{- range $quickLinks }}
