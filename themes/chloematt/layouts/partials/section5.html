@@ -1,4 +1,4 @@
-<section class="section section-light-grey is-medium">
+<section id="contact" class="section section-light-grey is-medium">
   <div class="container">
     <div class="title-wrapper has-text-centered">
       <h2 class="title is-2 is-spaced">Drop us a line or two </h2>
@@ -9,16 +9,19 @@
     <div class="content-wrapper">
       <div class="columns">
         <div class="column is-6 is-offset-3">
-          <form>
+          <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+            <p style="display: none;">
+                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+            </p>
             <div class="columns is-multiline">
               <div class="column is-6">
-                <input class="input is-medium" type="text" placeholder="Enter your name">
+                <input class="input is-medium" type="text" name="name" placeholder="Enter your name">
               </div>
               <div class="column is-6">
-                <input class="input is-medium" type="email" placeholder="Enter your email address">
+                <input class="input is-medium" type="email" name="email" placeholder="Enter your email address">
               </div>
               <div class="column is-12">
-                <textarea class="textarea" rows="10" placeholder="Write someting..."></textarea>
+                <textarea class="textarea" rows="10" name="inquiry" placeholder="Write someting..."></textarea>
               </div>
               <div class="form-footer has-text-centered mt-10">
                 <button class="button cta is-large primary-btn raised is-clear" style="background-color: #F4733B; border: none;">Send Message</button>
