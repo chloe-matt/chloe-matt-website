@@ -123,6 +123,10 @@ googleAnalytics = "UA-134825322-1"
   url = "/#services"
 
   [[params.navbar]]
+  title = "Products"
+  url = "/products/pokester"
+
+  [[params.navbar]]
   title = "Playbook"
   url = "/#playbook"
 

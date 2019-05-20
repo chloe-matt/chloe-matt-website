@@ -11,9 +11,73 @@
       <div id="status"></div>
     </div>
 
-    {{ block "main" . }}
+    {{ block "single" . }}
 
     {{ partial "single/single.html" . }}
+    
+    <section id="contact" class="section section-light-grey is-medium">
+      <div class="container">
+        <div class="title-wrapper has-text-centered">
+          <h2 class="title is-2 is-spaced">Order Pokester </h2>
+          <h3 class="subtitle is-5">Price <b>$19 (USD)</b> or <b>€17 (EUR)</b>.<br />The license will be valid for a year.</h3>
+          <div class="divider is-centered"></div>
+        </div>
+    
+        <div class="content-wrapper">
+          <div class="columns">
+            <div class="column is-6 is-offset-3">
+              <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                <p style="display: none;">
+                    <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                </p>
+                <div class="columns is-multiline">
+                  <div class="column is-full">
+                    <div class="field">
+                      <label class="label">Full name</label>
+                      <input class="input is-medium" type="text" name="name" placeholder="Enter your name">
+                    </div>
+                  </div>
+                  <div class="column is-6">
+                    <div class="field">
+                      <label class="label">Email</label>
+                      <input class="input is-medium" type="email" name="email" placeholder="Enter your email address">
+                    </div>
+                  </div>
+                  <div class="column is-6">
+                    <div class="field">
+                        <label class="label">Operating system</label>
+                        <div class="control">
+                          <div class="select is-medium">
+                            <select name="os">
+                              <option>-- Select your OS --</option>
+                              <option value="windows">Windows</option>
+                              <option value="mac">macOS</option>
+                              <option value="linux">Linux (Ubuntu)</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="column is-full" style="display: none;">
+                    <div class="field">
+                      <label class="label">Product</label>
+                      <input class="input is-medium" type="text" name="product" value="pokester">
+                    </div>
+                  </div>
+                  <div class="form-footer has-text-centered mt-10">
+                    <button class="button cta is-large primary-btn raised is-clear" style="background-color: #F4733B; border: none;">Order Now</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {{ if .Site.Params.footer }}
+    {{ partial "footer.html" . }}
+    {{ end }}
 
     <!-- Back To Top Button -->
     <div id="backtotop"><a href="#"></a></div>
