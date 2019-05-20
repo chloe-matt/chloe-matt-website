@@ -5,4 +5,33 @@ draft: false
 ---
 Twitter is a fabulous place for lead generation. Especially the Twitter List feature. Twitter List is a useful feature for organizing a group of Twitter's username. People use it to organise the information to follow based on their interest. You can utilise it to generate leads to get new potential customers for your business that has similar interest.
 
-Pokester is an automation tool to help you extract the information from Twitter's username in a particular list. It will work as a real user who browses the list and visit each profile one by one. Then you can use the information to poke your potential customers.
+Pokester is an automation tool to help you extract the information from Twitter's username in a particular list. It will work as a real user who browses the list and visit each profile one by one. Then you can use the information to poke your potential customers. Pokester can export the data into a CSV file so that you can import it to other tools you use.  
+
+<a class="button cta is-large primary-btn raised is-clear" style="background-color: #F4733B; border: none; margin: 10px 0;" href="#order-now">Order Now - $19 or €17</a>
+
+### Screenshots
+
+<div class="columns">
+    <figure class="column image">
+        <img src="/pokester_images/step-1.PNG" alt="step 1" />
+    </figure>
+    <figure class="column image">
+        <img src="/pokester_images/step-2.PNG" alt="step 2" />
+    </figure>
+</div>
+<div class="columns">
+    <figure class="column image">
+        <img src="/pokester_images/step-3.PNG" alt="step 3" />
+    </figure>
+    <figure class="column image">
+        <img src="/pokester_images/step-4.PNG" alt="step 4" />
+    </figure>
+</div>
+<div class="columns">
+    <figure class="column image">
+        <img src="/pokester_images/export.PNG" alt="export" />
+    </figure>
+    <figure class="column image">
+        <img src="/pokester_images/step-5.PNG" alt="step 5" />
+    </figure>
+</div>
