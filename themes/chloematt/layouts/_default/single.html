@@ -2,8 +2,43 @@
 <html lang="{{ .Site.LanguageCode }}">
   <head>
     {{ partial "meta.html" . }}
-    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    <meta description="Pokester is an automating tool to extract information from Twitter list.">
+    <title>Pokester - Lead generation from Twitter list</title>
     {{ partial "css.html" . }}
+
+    {{ template "_internal/google_analytics_async.html" . }}
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+    <script>
+    window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#edeff5",
+          "text": "#838391"
+        },
+        "button": {
+          "background": "#4b81e8"
+        }
+      },
+      "theme": "classic",
+      "position": "top",
+      "static": true
+    })});
+    </script>
+
+    
+    <style>
+    p {
+        margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    </style>
   </head>
   <body>
     <!-- Preloader -->
@@ -15,7 +50,7 @@
 
     {{ partial "single/single.html" . }}
     
-    <section id="contact" class="section section-light-grey is-medium">
+    <section id="order-now" class="section section-light-grey is-medium">
       <div class="container">
         <div class="title-wrapper has-text-centered">
           <h2 class="title is-2 is-spaced">Order Pokester </h2>
@@ -26,12 +61,12 @@
         <div class="content-wrapper">
           <div class="columns">
             <div class="column is-6 is-offset-3">
-              <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+              <form name="order-pokester" method="POST" netlify-honeypot="bot-field" data-netlify="true">
                 <p style="display: none;">
                     <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
                 </p>
                 <div class="columns is-multiline">
-                  <div class="column is-full">
+                  <div class="column is-6">
                     <div class="field">
                       <label class="label">Full name</label>
                       <input class="input is-medium" type="text" name="name" placeholder="Enter your name" required>
@@ -52,11 +87,24 @@
                               <option>-- Select your OS --</option>
                               <option value="windows">Windows</option>
                               <option value="mac">macOS</option>
-                              <option value="linux">Linux (Ubuntu)</option>
                             </select>
                           </div>
                         </div>
                       </div>
+                  </div>
+                  <div class="column is-6">
+                    <div class="field">
+                      <label class="label">We accept USD and EUR</label>
+                      <div class="control">
+                        <div class="select is-medium">
+                          <select name="currency">
+                            <option>Select your currency</option>
+                            <option value="usd">USD</option>
+                            <option value="eur">EUR</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div class="column is-full" style="display: none;">
                     <div class="field">
