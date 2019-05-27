@@ -7,7 +7,7 @@ Twitter is a fabulous place for lead generation. Especially the Twitter List fea
 
 Pokester is an automation tool to help you extract the information from Twitter's username in a particular list. It will work as a real user who browses the list and visit each profile one by one. Then you can use the information to poke your potential customers. Pokester can export the data into a CSV file so that you can import it to other tools you use.  
 
-<a class="button cta is-large primary-btn raised is-clear" style="background-color: #F4733B; border: none; margin: 10px 0;" href="#order-now">Order Now - $19 or €17</a>
+<a class="button cta is-large primary-btn raised is-clear" style="background-color: #F4733B; border: none; margin: 10px 0;" href="http://eepurl.com/gsOqML">Download now. It's FREE.</a>
 
 ### Screenshots
 
