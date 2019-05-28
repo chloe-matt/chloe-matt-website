@@ -9,6 +9,10 @@ Pokester is an automation tool to help you extract the information from Twitter'
 
 <a class="button cta is-large primary-btn raised is-clear" style="background-color: #F4733B; border: none; margin: 10px 0;" href="http://eepurl.com/gsOqML">Download now. It's FREE.</a>
 
+### Customization service
+
+If you need a custom version of Pokester to suit your data scraping needs, you can drop us an email: [hi@chloematt.com](mailto:hi@chloematt.com) or via this [contact form](/#contact).
+
 ### Screenshots
 
 <div class="columns">
