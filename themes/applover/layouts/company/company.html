@@ -1,0 +1,73 @@
+{{ define "main" }}
+
+<div class="container-fluid fadeIn">
+      <div class="row align-items-md-center">
+        <div class="col-12 col-md-6">
+          <img src="{{ "img/CM_About.svg" | absURL  }}" class="img-fluid" alt="About Chloè & Matt">
+        </div>
+
+        <div class="col-12 col-md-5 offset-md-1 text-center text-md-left">
+          <h1 class="pb-2 hello">Hello.</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid py-md-3 py-xl-5 my-5 text-center">
+      <div class="row">
+        <div class="col-12 col-xl-10 offset-xl-1">
+          <h4 class="about">
+            We’re Chloè & Matt, a digital product strategy and development firm help companies to innovate through collaboration by applying the combination of customers research and insights to bring impact.
+          </h4>
+        </div>
+        <div class="col-12 col-xl-8 offset-xl-2">
+          <p>We make sure the idea of a new digital product or service get validated first <br/>in the target market before entering the development phase.</p>
+          <div class="pt-5">
+            <a href="https://www.chloematt.com/compro-en.pdf" target="_blank" class="btn btn-primary btn-lg">Download Company Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-founder team">
+      <div class="row pb-xl-5 pb-md-3">
+        <div class="col-12 col-xl-10 offset-xl-1 text-center">
+          <h2>Our Team</h2>
+        </div>
+      </div>
+      <div class="row justify-content-around pb-xl-5">
+        <div class="col-3 col-xl-3 text-center">
+          <img src="{{ "img/retnoika.jpg" | absURL  }}" class="rounded-circle" alt="Retno Ika Safitri">
+          <h4 class="pt-xl-3 pb-xl-1">Retno Ika Safitri</h4>
+          <p>Product Strategist</p>
+          <ul class="nav teamsocial justify-content-center">
+            <li>
+              <a href="https://retnoika.github.io" target="_blank"><i class="fas fa-globe"></i></a>
+            </li>
+            <li>
+              <a href="https://instagram.com/retnoika.s" target="_blank"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="https://linkedin.com/in/retnoika" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-3 col-xl-3 text-center">
+          <img src="{{ "img/asepbagja.jpg" | absURL  }}" class="rounded-circle" alt="Asep Bagja Priandana">
+          <h4 class="pt-xl-3 pb-xl-1">Asep Bagja Priandana</h4>
+          <p>Tech Conoisseur</p>
+          <ul class="nav teamsocial justify-content-center">
+            <li>
+              <a href="https://asepbagja.com" target="_blank"><i class="fas fa-globe"></i></a>
+            </li>
+            <li>
+              <a href="https://instagram.com/bepitulaz" target="_blank"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="https://linkedin.com/in/asepbagja" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+{{ end }}

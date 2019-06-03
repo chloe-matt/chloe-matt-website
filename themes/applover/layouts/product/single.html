@@ -1,0 +1,20 @@
+{{ define "main" }}
+
+<div class="px-md-5 mb-xl-5 fadeIn product">
+      <div class="row py-xl-5">
+        <div class="col-12 text-center text-md-left">
+          <div class="row align-items-md-center">
+            <div class="col-12 col-xl-6">
+              <a href="/product"><i class="fas fa-arrow-left"></i>Back to Product</a>
+              <h2 class="pb-2 pt-4">{{ .Title }}</h2>
+            </div>
+            <div class="col-12 col-xl-6 text-right">
+              <a href="http://eepurl.com/gsOqML" target="_blank" class="btn btn-lg btn-primary">Download now. It's FREE.</a>
+            </div>
+          </div>
+          {{ .Content }}
+        </div>
+      </div>
+    </div>
+
+{{ end }}

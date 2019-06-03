@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="200px" viewBox="0 0 1440 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>founder-bottom</title>
+    <desc>Created with Sketch.</desc>
+    <g id="founder-bottom" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="#FFFFFF" x="0" y="84" width="1440" height="116"></rect>
+        <path d="M4.54747351e-13,72 C72,72 72,-1.37112544e-14 144,-1.42108547e-14 C216,-1.42108547e-14 216,72 288,72 C360,72 360,-1.94917867e-14 432,-1.42108547e-14 C504,-1.02140518e-14 504,72 576,72 C648,72 648,-1.37112544e-14 720,-1.42108547e-14 C792,-1.42108547e-14 792,72 864,72 C936,72 936,-9.08995101e-15 1008,-1.42108547e-14 C1080,-1.81139825e-14 1080,72 1152,72 C1224,72 1224,-1.37112544e-14 1296,-1.42108547e-14 C1368,-1.42108547e-14 1368,72 1440,72 C1440,128.671875 1440,170.338542 1440,197 L4.54747351e-13,197 C4.54747351e-13,186.211589 4.54747351e-13,144.544922 4.54747351e-13,72 Z" id="Path-85" fill="#352392" transform="translate(720.000000, 98.500000) scale(1, -1) translate(-720.000000, -98.500000) "></path>
+    </g>
+</svg>

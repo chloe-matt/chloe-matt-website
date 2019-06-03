@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+<div class="container-fluid fadeIn blog">
+	<div class="row align-items-top mx-2 my-5 py-xl-2">
+      	{{ .Content }}
+        <!-- Blog Items -->
+        {{ range .Pages }}
+        <div class="col-12 col-md-4 blog-item px-3">
+          <div class="blog-meta">
+            <a class="title" href="{{.Permalink}}">{{.Title}}</a>
+            <h6 class="date">{{.Date.Format "January 2, 2006"}}</h6>
+          </div>
+        </div>
+        {{ end }}
+    </div>
+</div>
+
+{{ end }}
