@@ -291,7 +291,7 @@ p {
 .singlepost h6 {
 	font-family: "Poppins", Arial, sans-serif;
 	color: #43444A;
-	font-weight: 500;
+	font-weight: 600;
 } 
 
 .singlepost h2 {
@@ -317,13 +317,14 @@ p {
 .singlepost p {
 	font-size: 1.2rem;
 	line-height: 1.8;
-	color: #43444A;
-	font-weight: 300;
+	color: #565758;
+	font-weight: 400;
+	padding: 0.7rem 0;
 }
 .singlepost blockquote {
 	padding: 1.2rem 2rem;
 	border-left: 4px solid #BAB1EC;
-	background-color: rgba(186,177,236,0.3);
+	background-color: rgba(186,177,236,0.15);
 	font-size: 1.2rem;
 	line-height: 1.8;
 	font-weight: 300;
@@ -335,7 +336,7 @@ p {
 	font-size: 1.2rem;
 	line-height: 1.8;
 	color: #5D43E6;
-	font-weight: 300;
+	font-weight: 400;
 }
 .singlepost a:hover {
 	text-decoration: none;
@@ -343,6 +344,12 @@ p {
       -moz-transition: all .3s linear;
       -webkit-transition: all .3s linear;
       -o-transition: all .3s linear;
+}
+.singlepost li {
+	font-size: 1.2rem;
+	line-height: 1.8;
+	color: #43444A;
+	font-weight: 400;
 }
 
 @media all and (min-width: 767px) {

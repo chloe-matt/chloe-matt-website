@@ -6,6 +6,9 @@
         <!-- Blog Items -->
         {{ range .Pages }}
         <div class="col-12 col-md-4 blog-item px-3">
+          <div class="blog-image">
+            <img src="{{ .Params.featuredimg }}" class="img-fluid rounded">
+          </div>
           <div class="blog-meta">
             <a class="title" href="{{.Permalink}}">{{.Title}}</a>
             <h6 class="date">{{.Date.Format "January 2, 2006"}}</h6>
