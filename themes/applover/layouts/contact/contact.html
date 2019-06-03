@@ -10,14 +10,17 @@
       <h2 class="pb-2">Want to talk to us <br/>directly?</h2>
       <p class="contact">Please fill in this form first. We will contact you in about 24 hours.</p>
 
-      <form class="form-contact py-3 text-left">
+      <form action="https://formspree.io/hi@chloematt.com" class="form-contact py-3 text-left">
         <div class="form-label-group">
-          <input type="text" id="inputName" class="form-control" placeholder="Your Name" required>
+          <input type="text" id="inputName" class="form-control" name="fullname" placeholder="Your Name" required>
           <label for="inputName">Full Name</label>
         </div>
         <div class="form-label-group">
-          <input type="email" id="inputEmail" class="form-control" placeholder="Email Address" required>
+          <input type="email" id="inputEmail" class="form-control" name="email" placeholder="Email Address" required>
           <label for="inputEmail">Email Address</label>
+        </div>
+        <div class="form-label-group">
+          <textarea id="inputInquiry" name="inquiry" class="form-control" placeholder="Your Message" required></textarea>
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Send Request</button>
       </form>

@@ -4,6 +4,9 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- SEO Description -->
+    <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}">
+
     <link rel="shortcut icon" type="image/png" href="{{ "img/favicon.png" | absURL }}">
 
     <!-- Bootstrap CSS -->
@@ -14,7 +17,28 @@
     <link rel="stylesheet" href="{{ "css/style.css" | absURL }}" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/8556bc5653.js"></script>
 
-    <title>Chloè & Matt | Digital Product Strategy and Development Firm</title>
+    <title>Chloè & Matt | {{ if .Title }}{{ print .Title }}{{ else }}{{ .Site.Title }}{{ end }}</title>
+
+    {{ template "_internal/google_analytics_async.html" . }}
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+    <script>
+    window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#edeff5",
+          "text": "#838391"
+        },
+        "button": {
+          "background": "#4b81e8"
+        }
+      },
+      "theme": "classic",
+      "position": "top",
+      "static": true
+    })});
+    </script>
   </head>
   <body>
     {{- partial "header.html" . -}}

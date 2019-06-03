@@ -656,6 +656,9 @@ footer a:hover {
   color: #777;
 }
 
+.form-label-group textarea {
+	height: 200px;
+}
 /* Fallback for Edge
 -------------------------------------------------- */
 @supports (-ms-ime-align: auto) {

@@ -2,6 +2,7 @@
 title: "Pentingnya Menguasai 2 Prinsip Dasar dalam Manajemen Produk"
 date: 2019-02-07T16:22:39+08:00
 draft: false
+description: "Cara melakukan manajemen produk di dalam perusahaan."
 featuredimg: /2019/PM2-Cover.png
 ---
 
