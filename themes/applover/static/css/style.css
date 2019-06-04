@@ -121,6 +121,10 @@ body {
     animation: 500ms ease forwards;
 }
 
+.navbar-toggler .fas {
+	color: #352392!important;
+}
+
 
 @media (min-width: 768px) {
 	.navbar-expand-md .navbar-nav .nav-link {
@@ -396,23 +400,33 @@ p {
 		font-size: 0.8rem;
 		line-height: 1.5;
 	}
+	h4.about {
+		font-size: 1.2rem;
+		line-height: 1.6;
+	}
 }
 
 
 /* Special Area */
 
-.hello:after {
-	content: "";
-    display: block;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    height: 20px;
-    width: auto;
-    background: left url(../img/About_Border.svg) no-repeat;
-    background-size: auto 20px;
-    -webkit-animation: 500ms ease forwards;
-    animation: 500ms ease forwards;
+@media all and (max-width: 576px) {
+	h1.hello {
+		font-size: 5rem;
+		margin-top: 2rem;
+	}
+	.hello: after {
+		background: center url(../img/About_Border.svg) no-repeat;
+		content: "";
+	    display: block;
+	    position: relative;
+	    bottom: 0;
+	    left: 0;
+	    height: 20px;
+	    width: auto;
+	    background-size: auto 20px;
+	    -webkit-animation: 500ms ease forwards;
+	    animation: 500ms ease forwards;
+	}
 }
 
 .team img {
@@ -490,6 +504,19 @@ p {
 	}
 	.ba-2 {
 		padding: 1rem 0 8rem 0;
+	}
+	.hello:after {
+		content: "";
+	    display: block;
+	    position: relative;
+	    bottom: 0;
+	    left: 0;
+	    height: 20px;
+	    width: auto;
+	    background: left url(../img/About_Border.svg) no-repeat;
+	    background-size: auto 20px;
+	    -webkit-animation: 500ms ease forwards;
+	    animation: 500ms ease forwards;
 	}
 }
 
