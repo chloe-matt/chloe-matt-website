@@ -1,11 +1,11 @@
 {{ define "main" }}
 
 <div class="container-fluid fadeIn blog">
-	<div class="row align-items-top mx-0 my-3 py-xl-2">
+	<div class="row align-items-top py-3">
       	{{ .Content }}
         <!-- Blog Items -->
         {{ range .Pages }}
-        <div class="col-12 col-md-4 blog-item px-2">
+        <div class="col-12 col-md-4 blog-item">
           <div class="blog-image">
             <img src="{{ .Params.featuredimg }}" class="img-fluid rounded">
           </div>
