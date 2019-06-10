@@ -1,25 +1,25 @@
 {{ define "main" }}
 
 <div class="container-fluid fadeIn singlepost">
-      <div class="row align-items-top mx-2 my-5 py-xl-2">
-        <div class="col-12 col-md px-2">
-          <div class="blog-meta">
-            <h1 class="title">{{ .Title }}</h1>
-            <div class="date mt-5">{{ .Date.Format "January 2, 2006" }}</div>
-          </div>
-        </div>
-        <div class="col-12 col-md px-2">
-          <div class="blog-image">
-            <img src="{{ .Params.featuredimg }}" class="img-fluid rounded">
-          </div>
-        </div>
-      </div>
-
-      <div class="row justify-content-center py-3">
-        <div class="col-12 col-md-8">
-          {{ .Content }}
-        </div>
+  <div class="row align-items-top py-3">
+    <div class="col-12 col-md px-2">
+      <div class="blog-meta">
+        <h1 class="title">{{ .Title }}</h1>
+        <div class="date mt-5">{{ .Date.Format "January 2, 2006" }}</div>
       </div>
     </div>
+    <div class="col-12 col-md px-2">
+      <div class="blog-image">
+        <img src="{{ .Params.featuredimg }}" class="img-fluid rounded">
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center py-3">
+    <div class="col-12 col-md-8">
+      {{ .Content }}
+    </div>
+  </div>
+</div>
 
 {{ end }}
