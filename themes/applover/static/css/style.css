@@ -588,8 +588,8 @@ p {
 	}
 
 	.part-1 {
-		background: no-repeat url(../img/part-1.svg);
-		background-size: contain;
+		background: url(../img/part-1.svg) center bottom no-repeat;
+		background-size: cover;
 	}
 	.part-2 {
 		background: no-repeat url(../img/part-2.svg);

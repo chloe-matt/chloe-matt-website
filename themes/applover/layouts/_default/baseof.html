@@ -13,7 +13,6 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-
     <!-- Add Ons -->
     <link rel="stylesheet" href="{{ "css/style.css" | absURL }}" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/8556bc5653.js"></script>
@@ -40,6 +39,7 @@
       "static": true
     })});
     </script>
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="0218bfed-fc64-4c66-830a-c6d34bed8362";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
   </head>
   <body>
     {{- partial "header.html" . -}}
@@ -47,7 +47,7 @@
     <!-- Main Body starts here -->
     {{- block "main" . }}{{- end }}
     <!-- Main Body ends here -->
-
+    
     {{- partial "footer.html" . -}}
 
     <!-- Optional JavaScript -->
