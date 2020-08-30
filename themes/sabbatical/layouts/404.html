@@ -1,0 +1,39 @@
+{{ define "main" }}
+
+<div class="d-md-flex h-md-100 align-items-center bg-indigo">
+  <!-- First Half -->
+  <div class="col-md-5 animated visible fadeIn p-0 h-md-100 logoarea" data-animate="fadeIn" style="background-image: url({{ "images/namaste.svg" | absURL}}); background-size: 80%; background-repeat: no-repeat; background-position: center;">
+    <div class="d-md-flex align-items-center h-100 justify-content-center">
+      <div class="">
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Half -->
+  <div class="col-md-7 p-0 h-md-100">
+    <div class="d-md-flex align-items-center h-md-100 homepage">
+      <div class="row justify-content-center d-sm-block d-md-none m-b-50">
+        <div class="col-8" data-animate="fadeIn" data-animate-delay="100">
+          <img src="{{ "images/ris.svg" | absURL}}" class="img-fluid">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-md-left text-sm-center p-b-40" data-animate="fadeIn" data-animate-delay="200">
+          <h1 class="text-white" style="font-size: 4.5rem;">Oops!</h1>
+          <h5 class="p-t-20 p-b-40 text-white">
+            A yogi silently moved this page. <br/>You can wait till the cows come home, or...
+          </h5>
+          <a href="/blog" class="btn btn-light btn-outline btn-reveal btn-reveal-left"><span>go back</span><i class="fas fa-arrow-left"></i></a>
+        </div>
+        
+        <div class="col text-center copyright">
+          <small>&copy; {{ now.Format "2006" }} Retno Ika Safitri. All Rights Reserved Worldwide.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+        
+</div>
+
+{{ end }}

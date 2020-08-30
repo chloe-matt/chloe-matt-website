@@ -1,7 +1,7 @@
 baseURL = "https://www.chloematt.com/"
 languageCode = "en-gb"
 title = "Digital Product Strategy and Development Firm"
-theme = "applover"
+theme = "sabbatical"
 
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
@@ -30,10 +30,10 @@ googleAnalytics = "UA-134825322-1"
     privacyEnhanced = false
 
 [params]
-  description = "We build mobile, web, and desktop app based on your requirement. Contact us!"
+  description = "Chloè & Matt is on sabbatical leave ~"
 
   [params.navbarlogo]
-  image = "logos/cm_logotype_light.png"
+  image = "cmfavicon.png"
   link = "/"
 
   [params.font]
