@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chloe &amp; Matt - Web development studio</title>
+    <meta name="description" content="Building modern web applications with Elixir and Phoenix" />
+    <script src="https://cdn.tailwindcss.com"></script>
+		<link rel="icon" href="/images/c-m-logo.png" type="image/png" />
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section class="min-h-[80vh] flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900">
+      <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGgxMnYyNEgzNnoiLz48cGF0aCBmaWxsPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMSkiIGQ9Ik0xMiAxMmgyNHYyNEgxMnoiLz48L2c+PC9zdmc+')] opacity-10"></div>
+      <div class="container px-4 py-32 mx-auto text-center relative z-10">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+          Building Modern Web Applications<br />
+          with Elixir & Phoenix
+        </h1>
+        <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+          Transform your ideas into scalable, high-performance web applications using the power of Elixir and Phoenix Framework.
+        </p>
+        <a href="#contact" class="inline-flex items-center px-6 py-3 text-lg font-medium text-purple-900 bg-white rounded-md hover:bg-gray-100 transition-colors">
+          Get Started
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="py-20 bg-gray-50" id="portfolio">
+      <div class="container px-4 mx-auto">
+        <div class="text-center space-y-2 mb-8">
+          <h2 class="text-3xl font-bold tracking-tight">Our Portfolio</h2>
+          <p class="text-gray-600">Discover our recent projects</p>
+        </div>
+				<div class="flex justify-center">
+          <div class="bg-white p-6 m-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+						<img src="/images/sonastik.jpeg" alt="Sõnastik logo" class="rounded-full w-12 h-12 shadow-sm" />
+            <h3 class="text-xl font-semibold my-2">Sõnastik</h3>
+            <p class="text-gray-600 mb-4">A browser extension and web application to find the explanation of any Estonian word.</p>
+            <a href="https://www.sonastik.ee" class="text-purple-600 hover:text-purple-700 inline-flex items-center">
+              View project
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="py-20" id="tech">
+      <div class="container px-4 mx-auto">
+        <div class="text-center space-y-2 mb-8">
+          <h2 class="text-3xl font-bold tracking-tight">Our Tech Stack</h2>
+          <p class="text-gray-600">Modern technologies for modern solutions</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+						<img src="/images/elixir-svgrepo-com.svg" alt="Elixir logo" class="rounded-full w-12 h-12 mx-auto mb-4" />
+            <h3 class="text-xl font-semibold mb-2">Elixir</h3>
+            <p class="text-gray-600">Functional programming language designed for building scalable and maintainable applications</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+            <img src="/images/brand-phoenix-framework-svgrepo-com.svg" alt="Elixir logo" class="rounded-full w-12 h-12 mx-auto mb-4" />
+            <h3 class="text-xl font-semibold mb-2">Phoenix Framework</h3>
+            <p class="text-gray-600">High-performance web framework that makes building robust web applications a breeze</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-4 text-purple-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            <h3 class="text-xl font-semibold mb-2">LiveView</h3>
+            <p class="text-gray-600">Real-time user experiences without writing JavaScript</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 bg-gray-50" id="about">
+      <div class="container px-4 mx-auto">
+        <div class="text-center space-y-2 mb-8">
+          <h2 class="text-3xl font-bold tracking-tight">About Us</h2>
+          <p class="text-gray-600">Building the future of web applications</p>
+        </div>
+        <div class="max-w-3xl mx-auto text-center">
+          <p class="text-lg text-gray-600 mb-6">
+            Hi, I'm <a href="http://linkedin.com/in/asepbagja/" target="_blank" class="underline hover:text-blue-600">Asep</a> a specialized web developer based in Tallinn, Estonia, focusing on building high-performance web applications using Elixir and Phoenix. With deep expertise in functional programming and scalable architectures, I help businesses transform their ideas into robust digital solutions.
+          </p>
+          <p class="text-lg text-gray-600">
+            As a solo developer with a passion for the Elixir/Phoenix ecosystem, I bring focused attention and direct communication to every project. My expertise allows me to create lightning-fast, reliable applications that can handle millions of concurrent users while maintaining exceptional performance.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20" id="contact">
+      <div class="container px-4 mx-auto">
+        <div class="text-center space-y-2 mb-8">
+          <h2 class="text-3xl font-bold tracking-tight">Let's talk</h2>
+          <p class="text-gray-600">Ready to start your next project?</p>
+        </div>
+        <div class="max-w-2xl mx-auto">
+          <p class="text-lg text-muted-foreground mb-6">
+            Interested in building something amazing with Elixir and Phoenix? 
+            I'm just an email away and ready to bring your ideas to life.
+          </p>
+					<div class="mt-6">
+						<a
+							href="mailto:hi@chloematt.com"
+							class="flex items-center justify-center gap-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+						>
+							<img src="/images/email-part-2-svgrepo-com.svg" alt="Email icon" class="w-7 h-7" />
+							Email Me
+						</a>
+					</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 border-t">
+      <div class="container px-4 mx-auto text-center text-sm text-gray-600">
+        © 2025 <a href="https://ariregister.rik.ee/est/company/14305217/Chloe--Matt-OÜ" target="_blank" class="underline hover:text-blue-600">Chloe &amp; Matt OÜ</a>. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
