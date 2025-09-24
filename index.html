@@ -3,12 +3,323 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chloe &amp; Matt - Web development studio</title>
-    <meta name="description" content="Building modern web applications with Elixir and Phoenix" />
+    <title>Chloe &amp; Matt - Boutique SaaS Development by Asep</title>
+    <meta name="description" content="I help founders build SaaS products that actually ship. No massive team, no agency overhead—just me, your code, and a messaging channel." />
     <script src="https://cdn.tailwindcss.com"></script>
-		<link rel="icon" href="/images/c-m-logo.png" type="image/png" />
+    <link rel="icon" href="/images/c-m-logo.png" type="image/png" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'warm-white': '#FEFEFE',
+              'charcoal': '#1F2937',
+              'sage': '#10B981',
+              'amber': '#F59E0B'
+            },
+            fontFamily: {
+              'sans': ['Inter', 'system-ui', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <h1>Coming soon</h1>
+  <body class="bg-warm-white text-charcoal font-sans leading-relaxed">
+    <!-- Navigation -->
+    <nav class="sticky top-0 bg-warm-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center space-x-2">
+            <img src="/images/c-m-logo.png" alt="Chloe & Matt" class="w-8 h-8 rounded-lg">
+            <span class="text-xl font-medium text-charcoal">Chloe & Matt</span>
+          </div>
+          <div class="hidden md:flex space-x-8">
+            <a href="#about" class="text-charcoal hover:text-sage transition-colors duration-200">About</a>
+            <a href="#services" class="text-charcoal hover:text-sage transition-colors duration-200">Services</a>
+            <a href="#contact" class="text-charcoal hover:text-sage transition-colors duration-200">Let's Chat</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-16 sm:py-20 lg:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-charcoal mb-6">
+            One Developer, No Drama <span class="wave-emoji">👋</span>
+          </h1>
+          <p class="text-xl sm:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
+            I help founders build SaaS products that actually ship. No massive team, no agency overhead. Just solid code and clear communication.
+          </p>
+          <div class="prose prose-lg mx-auto mb-12 text-gray-700">
+            <p>I build production-ready SaaS platforms that can handle real users from day one. While you focus on finding customers and refining your business model, I handle all the technical decisions and implementation. My goal is simple: deliver a solid foundation that scales with your business, not a prototype you'll need to rebuild in six months.</p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="mailto:asep@chloeandmatt.eu?subject=Let's%20Have%20a%20Coffee%20Chat&body=Hi%20Asep,%0D%0A%0D%0AI'd%20like%20to%20discuss%20my%20SaaS%20project%20with%20you.%0D%0A%0D%0ABest%20regards," class="bg-sage text-white px-8 py-4 rounded-xl font-medium hover:bg-sage/90 transition-all duration-200 transform hover:scale-105 shadow-lg">
+              Let's Have a Coffee Chat
+            </a>
+            <a href="#tech" class="text-charcoal border-2 border-charcoal px-8 py-4 rounded-xl font-medium hover:bg-charcoal hover:text-white transition-all duration-200">
+              Tech Stack
+            </a>
+          </div>
+          <p class="mt-8 text-amber font-medium bg-amber/10 inline-block px-4 py-2 rounded-full">
+            Currently accepting new clients for Q4 2025
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 sm:py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-bold text-charcoal mb-12 text-center">
+          Two Ways We Can Work Together
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Option 1: MVP -->
+          <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div class="mb-6">
+              <h3 class="text-2xl font-bold text-charcoal mb-2">Your 90-Day MVP</h3>
+              <p class="text-3xl font-bold text-sage mb-4">€15,000 <span class="text-lg font-normal text-gray-600">fixed price</span></p>
+              <p class="text-gray-700">Let's get your SaaS live and earning revenue</p>
+            </div>
+
+            <div class="mb-6">
+              <h4 class="font-semibold text-charcoal mb-3">Here's what happens:</h4>
+              <ul class="space-y-2 text-gray-700">
+                <li>• <strong>Week 1:</strong> We map out your MVP together (what ships vs. what waits)</li>
+                <li>• <strong>Week 2-11:</strong> I build while you sell</li>
+                <li>• <strong>Week 12:</strong> You launch to real customers</li>
+              </ul>
+            </div>
+
+            <div class="mb-6">
+              <h4 class="font-semibold text-charcoal mb-3">You get:</h4>
+              <ul class="space-y-2 text-gray-700">
+                <li>• Complete SaaS with authentication & payments</li>
+                <li>• Admin panel you can actually use</li>
+                <li>• Deployed and running on European servers</li>
+                <li>• 30 days of fixes after launch</li>
+                <li>• All the code (it's yours forever)</li>
+              </ul>
+            </div>
+
+            <p class="text-sm text-gray-600 bg-gray-50 p-3 rounded-lg">
+              <strong>Perfect if:</strong> You need to validate your idea with paying customers, not PowerPoints
+            </p>
+          </div>
+
+          <!-- Option 2: Part-time CTO -->
+          <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div class="mb-6">
+              <h3 class="text-2xl font-bold text-charcoal mb-2">Your Part-Time CTO</h3>
+              <p class="text-3xl font-bold text-sage mb-4">€3,000/month <span class="text-lg font-normal text-gray-600">(3-month minimum)</span></p>
+              <p class="text-gray-700">I join your team 20 hours per week</p>
+            </div>
+
+            <div class="mb-6">
+              <p class="text-gray-700 mb-4">Think of me as your technical co-founder who doesn't want equity. I'll:</p>
+              <ul class="space-y-2 text-gray-700">
+                <li>• Build features based on actual customer feedback</li>
+                <li>• Fix bugs (usually same day)</li>
+                <li>• Handle the technical decisions so you can focus on growth</li>
+                <li>• Join your customer calls when technical expertise helps close deals</li>
+              </ul>
+            </div>
+
+            <p class="text-sm text-gray-600 bg-gray-50 p-3 rounded-lg mb-4">
+              <strong>Perfect if:</strong> You have some traction and need to move fast without hiring full-time
+            </p>
+
+            <p class="text-sm text-amber font-medium">
+              <strong>Note:</strong> I only take on 3 monthly clients at a time to ensure everyone gets proper attention.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How I Work Section -->
+    <section class="py-16 sm:py-20 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-bold text-charcoal mb-8 text-center">
+          Working With Me Feels Different
+        </h2>
+        <h3 class="text-xl font-semibold text-center text-gray-700 mb-12">No Agencies, No Surprises</h3>
+
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <div class="text-2xl mb-3">📱</div>
+            <h4 class="font-semibold text-charcoal mb-2">We share a communication channel</h4>
+            <p class="text-gray-700">Message me like a teammate. I typically respond within hours, not days.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <div class="text-2xl mb-3">🎥</div>
+            <h4 class="font-semibold text-charcoal mb-2">Weekly walkthroughs</h4>
+            <p class="text-gray-700">I show you what I built, why I made certain decisions, and what's coming next.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <div class="text-2xl mb-3">💰</div>
+            <h4 class="font-semibold text-charcoal mb-2">You pay in stages</h4>
+            <p class="text-gray-700">50% upfront, 50% on launch. Monthly clients pay on the 1st. Simple.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <div class="text-2xl mb-3">🚀</div>
+            <h4 class="font-semibold text-charcoal mb-2">We ship every week</h4>
+            <p class="text-gray-700">No three-month disappearing act. You'll see progress every single week.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <div class="text-2xl mb-3">📝</div>
+            <h4 class="font-semibold text-charcoal mb-2">You own everything</h4>
+            <p class="text-gray-700">Code, documentation, deployment guides. If we part ways, you're not stranded.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <div class="text-2xl mb-3">🤝</div>
+            <h4 class="font-semibold text-charcoal mb-2">I'll tell you the truth</h4>
+            <p class="text-gray-700">If a feature will kill your timeline, I'll say so. If there's a cheaper way, I'll suggest it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="tech" class="py-16 sm:py-20">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-bold text-charcoal mb-8 text-center">
+          I Use Boring Technology That Works
+        </h2>
+        <p class="text-xl text-center text-gray-600 mb-12">
+          No bleeding edge. No resume-driven development. Just proven tools that scale.
+        </p>
+
+        <div class="space-y-8">
+          <div class="bg-white p-8 rounded-2xl border border-gray-200">
+            <h3 class="text-xl font-bold text-sage mb-4">React + Supabase <span class="text-sm font-normal text-gray-600">for 90% of projects</span></h3>
+            <p class="text-gray-700 mb-4">Why? Because it gets you to market fastest. Real-time features, authentication, and a database. All from day one. Costs €25/month to start, scales to 100K users.</p>
+          </div>
+
+          <div class="bg-white p-8 rounded-2xl border border-gray-200">
+            <h3 class="text-xl font-bold text-sage mb-4">Elixir + Phoenix <span class="text-sm font-normal text-gray-600">when you need more power</span></h3>
+            <p class="text-gray-700 mb-4">When you're handling millions of requests or need real-time features for thousands of concurrent users, we'll talk about Elixir.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Personal Touch Section -->
+    <section class="py-16 sm:py-20 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-bold text-charcoal mb-8 text-center">
+          A Bit About Me
+        </h2>
+
+        <div class="text-center mb-8">
+          <img src="/images/1653680288305.jpeg" alt="Asep Bagja Priandana" class="w-48 h-48 rounded-full mx-auto mb-6 object-cover shadow-lg">
+          <p class="text-gray-700 mb-6">I'm Asep, based in Tallinn, Estonia. When I'm not writing code, you'll find me with Chloe and Matt (yes, the agency is named after my cats) who provide excellent moral support during debugging sessions.</p>
+
+          <a href="https://www.linkedin.com/in/asepbagja/" target="_blank" class="text-charcoal border-2 border-charcoal px-8 py-4 rounded-xl font-medium hover:bg-charcoal hover:text-white transition-all duration-200">
+            Connect on LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-16 sm:py-20">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
+          Let's See If We're a Good Fit
+        </h2>
+        <p class="text-xl text-gray-600 mb-8">
+          Book a 30-minute coffee chat. We'll discuss your idea, I'll be honest about whether I can help, and you can decide if I'm the right developer for you.
+        </p>
+
+        <a href="mailto:asep@chloeandmatt.eu?subject=Coffee%20Chat%20Request&body=Hi%20Asep,%0D%0A%0D%0AI'd%20like%20to%20schedule%20a%2030-minute%20coffee%20chat%20to%20discuss%20my%20SaaS%20project.%0D%0A%0D%0APlease%20let%20me%20know%20your%20availability.%0D%0A%0D%0ABest%20regards," class="inline-block bg-sage text-white px-12 py-4 rounded-xl text-lg font-medium hover:bg-sage/90 transition-all duration-200 transform hover:scale-105 shadow-lg mb-8">
+          Send a discussion request
+        </a>
+
+        <p class="text-gray-600 mb-12">
+          I actually read and respond to every email personally.
+        </p>
+
+        <!-- FAQ Section -->
+        <div class="bg-gray-50 p-8 rounded-2xl text-left">
+          <h3 class="text-xl font-bold text-charcoal mb-6 text-center">Quick Questions</h3>
+          <div class="space-y-6">
+            <div>
+              <h4 class="font-semibold text-charcoal mb-2">"What if I'm not technical?"</h4>
+              <p class="text-gray-700">Perfect. I explain everything in plain English and make technical decisions so you don't have to.</p>
+            </div>
+
+            <div>
+              <h4 class="font-semibold text-charcoal mb-2">"How do I know you won't disappear?"</h4>
+              <p class="text-gray-700">Fair question. Let's start with a small paid discovery week. If we don't click, we part ways friends.</p>
+            </div>
+
+            <div>
+              <h4 class="font-semibold text-charcoal mb-2">"Why just one developer?"</h4>
+              <p class="text-gray-700">I use AI to handle boilerplate while I focus on architecture and business logic. No "vibe-based programming". Every decision is intentional, tested, and serves your business goals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-white py-12">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h3 class="text-2xl font-bold mb-2">Chloe & Matt</h3>
+          <p class="text-gray-400 mb-4">Boutique SaaS Development by Asep Bagja Priandana</p>
+          <p class="text-gray-400 mb-4">
+            <a href="mailto:asep@chloeandmatt.eu" class="hover:text-white transition-colors">asep@chloeandmatt.eu</a><br>
+          </p>
+          <p class="text-sm text-gray-500 mb-6">
+            Chloe & Matt OÜ (Reg. Code: 14305217)
+          </p>
+
+          <div class="flex justify-center space-x-6 mb-6">
+            <a href="https://www.linkedin.com/in/asepbagja/" class="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
+            <a href="https://www.github.com/bepitulaz" class="text-gray-400 hover:text-white transition-colors">GitHub</a>
+          </div>
+
+          <p class="text-sm text-gray-500 italic">
+            P.S. Yes, Chloe & Matt are my cats. They're excellent project managers. They ensure I take breaks and maintain work-life balance. 🐱
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <style>
+      .wave-emoji {
+        display: inline-block;
+        animation: wave 2s infinite;
+        transform-origin: 70% 70%;
+      }
+
+      @keyframes wave {
+        0% { transform: rotate(0deg); }
+        10% { transform: rotate(14deg); }
+        20% { transform: rotate(-8deg); }
+        30% { transform: rotate(14deg); }
+        40% { transform: rotate(-4deg); }
+        50% { transform: rotate(10deg); }
+        60% { transform: rotate(0deg); }
+        100% { transform: rotate(0deg); }
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
   </body>
 </html>
