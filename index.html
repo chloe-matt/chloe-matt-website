@@ -2,306 +2,1008 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chloe &amp; Matt - API Integration &amp; Business Automation by Asep</title>
-    <meta name="description" content="I help small businesses connect their systems, automate workflows, and build custom dashboards. No massive team, no agency overhead—just me, your code, and a messaging channel." />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Chloe &amp; Matt — small digital products, built with AI</title>
+    <meta
+      name="description"
+      content="Chloe &amp; Matt OÜ is an Estonian digital product company run by AI agents, with a human board member. We discover, build, market, and sell small software products."
+    />
     <link rel="icon" href="/images/c-m-logo.png" type="image/png" />
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'warm-white': '#FEFEFE',
-              'charcoal': '#1F2937',
-              'sage': '#10B981',
-              'amber': '#F59E0B'
-            },
-            fontFamily: {
-              'sans': ['Inter', 'system-ui', 'sans-serif']
-            }
-          }
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/tokens.css" />
+
+    <script defer data-domain="chloematt.eu" src="https://plausible.io/js/script.outbound-links.js"></script>
+
+    <style>
+      /* Hallmark · genre: modern-minimal · macrostructure: Split Studio
+       * H2 split-diptych knobs: ratio=7/5, right=straight-answer panel, divider=negative space
+       * nav: N5 Floating pill (width=content-sized, backdrop=blur+saturate, anchor=top-centred)
+       * footer: Ft5 Statement (sentence=38ch, wordmark=under sentence, rule=hairline)
+       * theme: custom · vibe: "honest, warm, plain-spoken, EU"
+       * paper: oklch(96.5% 0.008 60) · accent: oklch(64.5% 0.206 38.4)
+       * display: Bricolage Grotesque · body: Geist · outlier: Geist Mono
+       * axes: light / geometric-sans / warm · enrichment: none · studied: no
+       * context: user-provided (audience + tone + hosting stance), angle inferred
+       * pre-emit critique: P5 H5 E4 S5 R4 V4
+       *
+       * contrast: pass (40–41) · nav: N5 · footer: Ft5 · slop: pass (42–45)
+       * honest: pass (46) · chrome: pass (47) · tokens: pass (48)
+       * responsive: pass (49) · icons: pass (30) · mobile: pass (34, 49, 50–57)
+       * gate 26: no disabled state — every control is an <a>; no forms on page.
+       * gate 39: N/A — no inputs.
+       */
+
+      *,
+      *::before,
+      *::after { box-sizing: border-box; }
+
+      html {
+        overflow-x: clip;
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+        interpolate-size: allow-keywords;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+      }
+
+      body {
+        overflow-x: clip;
+        margin: 0;
+        background: var(--color-paper);
+        color: var(--color-ink);
+        font-family: var(--font-body);
+        font-size: var(--text-md);
+        font-weight: 400;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      h1, h2, h3, h4 {
+        font-family: var(--font-display);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.08;
+        letter-spacing: -0.025em;
+        overflow-wrap: anywhere;
+        min-width: 0;
+        margin: 0;
+      }
+
+      p { margin: 0; }
+      img { max-width: 100%; height: auto; display: block; }
+
+      a { color: inherit; }
+
+      :focus-visible {
+        outline: 2px solid var(--color-focus);
+        outline-offset: 3px;
+        border-radius: var(--space-3xs);
+      }
+
+      .shell {
+        width: 100%;
+        max-width: 78rem;
+        margin-inline: auto;
+        padding-inline: var(--page-gutter);
+      }
+
+      .tnum { font-variant-numeric: tabular-nums; }
+
+      .vh {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+      }
+
+      .skip {
+        position: absolute;
+        inset-inline-start: -9999px;
+        top: var(--space-md);
+        z-index: var(--z-tooltip);
+        background: var(--color-ink);
+        color: var(--color-paper);
+        padding: var(--space-sm) var(--space-md);
+        border-radius: var(--radius-input);
+        font-size: var(--text-sm);
+        text-decoration: none;
+      }
+      .skip:focus { inset-inline-start: var(--space-md); }
+
+      /* ============ N5 · Floating pill nav ============ */
+
+      .nav {
+        position: fixed;
+        top: var(--space-md);
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: var(--z-sticky);
+        display: flex;
+        align-items: center;
+        gap: var(--space-lg);
+        max-width: calc(100% - var(--space-lg));
+        padding: var(--space-xs) var(--space-xs) var(--space-xs) var(--space-md);
+        background: color-mix(in oklch, var(--color-paper) 80%, transparent);
+        backdrop-filter: blur(14px) saturate(120%);
+        -webkit-backdrop-filter: blur(14px) saturate(120%);
+        border: var(--rule-hair) solid var(--color-rule);
+        border-radius: var(--radius-pill);
+        box-shadow: var(--shadow-pill);
+      }
+
+      .nav__brand {
+        display: flex;
+        align-items: center;
+        gap: var(--space-xs);
+        font-family: var(--font-display);
+        font-weight: 800;
+        font-size: var(--text-base);
+        letter-spacing: -0.03em;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+      .nav__brand img { width: 22px; height: 22px; }
+
+      .nav__links {
+        display: flex;
+        align-items: center;
+        gap: var(--space-lg);
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .nav__link {
+        font-size: var(--text-sm);
+        font-weight: 500;
+        color: var(--color-ink-2);
+        text-decoration: none;
+        white-space: nowrap;
+        padding-block: var(--space-2xs);
+        border-bottom: 2px solid transparent;
+        transition: color var(--dur-short) var(--ease-out),
+                    border-color var(--dur-short) var(--ease-out);
+      }
+      .nav__link:hover { color: var(--color-ink); border-bottom-color: var(--color-accent); }
+
+      @media (max-width: 52rem) {
+        .nav__links { display: none; }
+      }
+      @media (max-width: 26rem) {
+        .nav { gap: var(--space-sm); padding-inline-start: var(--space-sm); }
+        .nav__brand { font-size: var(--text-sm); }
+      }
+
+      /* ============ Buttons ============ */
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-xs);
+        min-height: 44px;
+        padding: var(--space-sm) var(--space-lg);
+        font-family: var(--font-body);
+        font-size: var(--text-base);
+        font-weight: 500;
+        white-space: nowrap;
+        text-decoration: none;
+        border: var(--rule-hair) solid transparent;
+        border-radius: var(--radius-pill);
+        cursor: pointer;
+        transition: background-color var(--dur-short) var(--ease-out),
+                    border-color var(--dur-short) var(--ease-out),
+                    color var(--dur-short) var(--ease-out),
+                    transform var(--dur-micro) var(--ease-out);
+      }
+
+      .btn--primary {
+        background: var(--color-accent);
+        color: var(--color-accent-ink);
+      }
+      .btn--secondary {
+        background: transparent;
+        color: var(--color-ink);
+        border-color: var(--color-ink);
+      }
+      .btn--sm { min-height: 38px; padding: var(--space-xs) var(--space-md); font-size: var(--text-sm); }
+
+      @media (hover: hover) and (pointer: fine) {
+        .btn--primary:hover { background: var(--color-accent-deep); color: var(--color-paper); transform: translateY(-1.5px); }
+        .btn--secondary:hover { background: var(--color-ink); color: var(--color-paper); transform: translateY(-1.5px); }
+      }
+      .btn:active { transform: translateY(1px); }
+
+      .link-arrow {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-2xs);
+        font-weight: 500;
+        white-space: nowrap;
+        color: var(--color-accent-deep);
+        text-decoration: none;
+        border-bottom: 1px solid var(--color-accent);
+        padding-block-end: 2px;
+        transition: border-color var(--dur-short) var(--ease-out);
+      }
+      .link-arrow:hover { border-bottom-color: var(--color-accent-deep); }
+
+      /* ============ Section furniture ============ */
+
+      .head-hang { max-width: 48ch; }
+      .head-hang h2 {
+        font-size: var(--text-3xl);
+        max-width: 20ch;
+        margin-block-end: var(--space-md);
+      }
+      .head-hang p {
+        color: var(--color-ink-2);
+        font-size: var(--text-md);
+      }
+
+      .band { background: var(--color-paper-2); }
+
+      /* ============ Hero · H2 split diptych ============ */
+
+      .hero {
+        /* Bottom-heavy on purpose (gate 44a): the hero settles into the next
+           section instead of floating. Top clears the fixed pill nav. */
+        padding-block: calc(var(--space-2xl) + var(--space-xl)) var(--space-4xl);
+      }
+      .hero__grid {
+        display: grid;
+        grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+        gap: var(--space-3xl);
+        align-items: start;
+      }
+      .hero h1 {
+        font-size: var(--text-display);
+        font-weight: 800;
+        max-width: 15ch;
+        margin-block-end: var(--space-lg);
+      }
+      .hero__lede {
+        font-size: var(--text-lg);
+        line-height: 1.45;
+        color: var(--color-ink-2);
+        max-width: 42ch;
+        margin-block-end: var(--space-md);
+      }
+      .hero__sub {
+        color: var(--color-muted);
+        max-width: 46ch;
+        font-size: var(--text-base);
+        margin-block-end: var(--space-xl);
+      }
+      .hero__actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: var(--space-md) var(--space-lg);
+      }
+
+      .panel {
+        background: var(--color-paper-2);
+        border: var(--rule-hair) solid var(--color-rule);
+        border-radius: var(--radius-card);
+        padding: var(--space-xl);
+      }
+      .panel__q {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: var(--text-lg);
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+        margin-block-end: var(--space-md);
+      }
+      .panel p + p { margin-block-start: var(--space-md); }
+      .panel p { color: var(--color-ink-2); font-size: var(--text-base); }
+      .panel strong { color: var(--color-ink); font-weight: 500; }
+
+      @media (max-width: 60rem) {
+        .hero { padding-block: calc(var(--space-2xl) + var(--space-xs)) var(--space-3xl); }
+        .hero__grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-2xl); }
+      }
+
+      /* ============ Packages ============ */
+
+      .work { padding-block: var(--space-3xl); }
+      .work__list {
+        margin-block-start: var(--space-2xl);
+        border-top: var(--rule-hair) solid var(--color-rule);
+      }
+
+      .offer {
+        display: grid;
+        grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+        gap: var(--space-lg) var(--space-2xl);
+        padding-block: var(--space-xl);
+        border-bottom: var(--rule-hair) solid var(--color-rule);
+        transition: background-color var(--dur-short) var(--ease-out);
+      }
+      @media (hover: hover) and (pointer: fine) {
+        .offer:hover { background: var(--color-paper-2); }
+      }
+
+      .offer__name {
+        font-size: var(--text-xl);
+        margin-block-end: var(--space-xs);
+      }
+      .offer__price {
+        font-family: var(--font-outlier);
+        font-size: var(--text-sm);
+        font-weight: 500;
+        color: var(--color-accent-deep);
+        letter-spacing: 0.02em;
+      }
+      .offer__body p { color: var(--color-ink-2); max-width: var(--measure); }
+      .offer__for {
+        margin-block-start: var(--space-md);
+        font-size: var(--text-sm);
+        color: var(--color-muted);
+      }
+      .offer__for strong { color: var(--color-ink-2); font-weight: 500; }
+
+      .offer--audit {
+        margin-block-start: var(--space-xl);
+        border: var(--rule-hair) solid var(--color-rule);
+        border-radius: var(--radius-card);
+        background: var(--color-paper-2);
+        padding: var(--space-xl);
+      }
+
+      @media (max-width: 60rem) {
+        .offer { grid-template-columns: minmax(0, 1fr); gap: var(--space-sm); }
+        .offer--audit { padding: var(--space-lg); }
+      }
+
+      /* ============ Worked example — diptych flipped ============ */
+
+      .case { padding-block: var(--space-2xl) var(--space-3xl); }
+      .case__grid {
+        display: grid;
+        grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+        gap: var(--space-3xl);
+        align-items: start;
+      }
+      .case__list { margin: 0; padding: 0; list-style: none; }
+      .case__list li {
+        padding-block: var(--space-md);
+        border-bottom: var(--rule-hair) solid var(--color-rule);
+        color: var(--color-ink-2);
+      }
+      .case__list li:first-child { border-top: var(--rule-hair) solid var(--color-rule); }
+      .case__list b { color: var(--color-ink); font-weight: 500; }
+
+      .case__prose p { color: var(--color-ink-2); max-width: var(--measure); }
+      .case__prose p + p { margin-block-start: var(--space-md); }
+      .case__prose h3 {
+        font-size: var(--text-xl);
+        margin-block: var(--space-xl) var(--space-md);
+      }
+
+      .caveat {
+        margin-block-start: var(--space-xl);
+        padding-inline-start: var(--space-lg);
+        border-inline-start: 2px solid var(--color-accent);
+        font-size: var(--text-base);
+      }
+
+      @media (max-width: 60rem) {
+        .case__grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-2xl); }
+      }
+
+      /* ============ Use case — full-width table (grid break) ============ */
+
+      .runs { padding-block: var(--space-3xl) var(--space-2xl); }
+
+      .spec {
+        width: 100%;
+        margin-block-start: var(--space-2xl);
+        border-collapse: collapse;
+        text-align: start;
+      }
+      .spec th, .spec td {
+        padding: var(--space-lg) var(--space-lg) var(--space-lg) 0;
+        border-bottom: var(--rule-hair) solid var(--color-rule);
+        vertical-align: top;
+        font-size: var(--text-base);
+      }
+      .spec thead th {
+        font-family: var(--font-outlier);
+        font-size: var(--text-xs);
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--color-muted);
+        padding-block: var(--space-sm);
+        border-bottom-color: var(--color-ink);
+      }
+      .spec tbody th {
+        font-family: var(--font-display);
+        font-size: var(--text-md);
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        width: 22%;
+      }
+      .spec td { color: var(--color-ink-2); }
+      .spec .is-pick { color: var(--color-accent-deep); font-weight: 500; }
+
+      .runs__note {
+        margin-block-start: var(--space-xl);
+        max-width: 56ch;
+        color: var(--color-ink-2);
+      }
+
+      @media (max-width: 60rem) {
+        .spec thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+        .spec tbody th, .spec td { display: block; width: auto; padding: 0; border: 0; }
+        .spec tbody tr {
+          display: block;
+          padding-block: var(--space-lg);
+          border-bottom: var(--rule-hair) solid var(--color-rule);
+        }
+        .spec tbody th { margin-block-end: var(--space-xs); }
+        .spec td { margin-block-start: var(--space-sm); }
+        .spec td::before {
+          content: attr(data-label);
+          display: block;
+          font-family: var(--font-outlier);
+          font-size: var(--text-xs);
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          color: var(--color-muted);
+          margin-block-end: var(--space-3xs);
         }
       }
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script defer data-domain="chloematt.eu" src="https://plausible.io/js/script.outbound-links.js"></script>
+
+      /* ============ How we work ============ */
+
+      .how { padding-block: var(--space-3xl); }
+      .how__grid {
+        display: grid;
+        grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+        gap: var(--space-3xl);
+        align-items: start;
+      }
+      .how__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+        gap: var(--space-xl) var(--space-2xl);
+      }
+      .how__items h3 {
+        font-size: var(--text-md);
+        margin-block-end: var(--space-2xs);
+      }
+      .how__items p { color: var(--color-ink-2); font-size: var(--text-base); }
+
+      @media (max-width: 60rem) {
+        .how__grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-2xl); }
+      }
+
+      /* ============ About — diptych, photo left ============ */
+
+      .who { padding-block: var(--space-3xl) var(--space-2xl); }
+      .who__grid {
+        display: grid;
+        grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+        gap: var(--space-3xl);
+        align-items: start;
+      }
+      .who__photo {
+        margin: 0;
+        border-radius: var(--radius-card);
+        overflow: hidden;
+        border: var(--rule-hair) solid var(--color-rule);
+        max-width: 18rem;
+      }
+      .who__prose h2 { font-size: var(--text-2xl); margin-block-end: var(--space-lg); }
+      .who__prose p { color: var(--color-ink-2); max-width: var(--measure); }
+      .who__prose p + p { margin-block-start: var(--space-md); }
+      .who__links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-lg);
+        margin-block-start: var(--space-xl);
+      }
+
+      @media (max-width: 60rem) {
+        .who__grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); }
+        .who__photo { max-width: 12rem; }
+      }
+
+      /* ============ FAQ — single column (deliberate break) ============ */
+
+      .faq { padding-block: var(--space-2xl) var(--space-3xl); }
+      .faq__inner { max-width: 46rem; }
+      .faq__list { margin-block-start: var(--space-2xl); border-top: var(--rule-hair) solid var(--color-rule); }
+
+      .qa { border-bottom: var(--rule-hair) solid var(--color-rule); }
+      .qa summary {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: var(--space-lg);
+        padding-block: var(--space-lg);
+        cursor: pointer;
+        list-style: none;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: var(--text-md);
+        letter-spacing: -0.02em;
+        transition: color var(--dur-short) var(--ease-out);
+      }
+      .qa summary::-webkit-details-marker { display: none; }
+      .qa summary:hover { color: var(--color-accent-deep); }
+      /* Body face, not the outlier — the outlier is limited to two slots
+         (figures, table labels) per the 2+1 rule. */
+      .qa__sign {
+        flex: none;
+        font-family: var(--font-body);
+        font-size: var(--text-lg);
+        font-weight: 400;
+        color: var(--color-accent);
+        line-height: 1;
+        transition: transform var(--dur-short) var(--ease-in-out);
+      }
+      .qa[open] .qa__sign { transform: rotate(45deg); }
+
+      .qa__a { padding-block-end: var(--space-lg); }
+      .qa__a p { color: var(--color-ink-2); max-width: var(--measure); font-size: var(--text-base); }
+      .qa__a p + p { margin-block-start: var(--space-md); }
+
+      .qa::details-content {
+        block-size: 0;
+        overflow: hidden;
+        transition: block-size var(--dur-long) var(--ease-in-out),
+                    content-visibility var(--dur-long) allow-discrete;
+      }
+      .qa[open]::details-content { block-size: auto; }
+
+      /* ============ Closing CTA ============ */
+
+      .close { padding-block: var(--space-3xl); border-top: var(--rule-hair) solid var(--color-rule); }
+      .close__grid {
+        display: grid;
+        grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+        gap: var(--space-2xl);
+        align-items: end;
+      }
+      .close h2 { font-size: var(--text-2xl); max-width: 20ch; margin-block-end: var(--space-md); }
+      .close p { color: var(--color-ink-2); max-width: 48ch; }
+      .close__actions { display: flex; flex-wrap: wrap; gap: var(--space-md); }
+
+      @media (max-width: 60rem) {
+        .close__grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); }
+      }
+
+      /* ============ Ft5 · Statement footer ============ */
+
+      .foot {
+        background: var(--color-band);
+        color: var(--color-band-ink);
+        padding-block: var(--space-3xl) var(--space-xl);
+      }
+      .foot__line {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: clamp(1.75rem, 4vw + 0.5rem, 3rem);
+        line-height: 1.06;
+        letter-spacing: -0.03em;
+        max-width: 24ch;
+        overflow-wrap: anywhere;
+      }
+      .foot__meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: var(--space-xl);
+        margin-block-start: var(--space-3xl);
+        padding-block-start: var(--space-lg);
+        border-top: var(--rule-hair) solid var(--color-band-rule);
+        font-size: var(--text-sm);
+        color: var(--color-band-muted);
+      }
+      .foot__meta a {
+        color: var(--color-band-ink);
+        text-decoration: none;
+        white-space: nowrap;
+        border-bottom: 1px solid var(--color-band-rule);
+        transition: border-color var(--dur-short) var(--ease-out);
+      }
+      .foot__meta a:hover { border-bottom-color: var(--color-accent); }
+      .foot__links { display: flex; flex-wrap: wrap; gap: var(--space-lg); }
+      .foot__ps {
+        margin-block-start: var(--space-xl);
+        font-size: var(--text-sm);
+        color: var(--color-band-muted);
+        max-width: 54ch;
+      }
+      .foot :focus-visible { outline-color: var(--color-accent); }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
   </head>
-  <body class="bg-warm-white text-charcoal font-sans leading-relaxed">
-    <!-- Navigation -->
-    <nav class="sticky top-0 bg-warm-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center py-4">
-          <div class="flex items-center space-x-2">
-            <img src="/images/c-m-logo.png" alt="Chloe & Matt" class="w-8 h-8 rounded-lg">
-            <span class="text-xl font-medium text-charcoal">Chloe & Matt</span>
-          </div>
-          <div class="hidden md:flex space-x-8">
-            <a href="#about" class="text-charcoal hover:text-sage transition-colors duration-200">About</a>
-            <a href="#services" class="text-charcoal hover:text-sage transition-colors duration-200">Services</a>
-            <a href="#contact" class="text-charcoal hover:text-sage transition-colors duration-200">Let's Chat</a>
-          </div>
-        </div>
-      </div>
+
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <nav class="nav" aria-label="Primary">
+      <a class="nav__brand" href="#top">
+        <img src="/images/c-m-logo.png" alt="" width="22" height="22" />
+        Chloe &amp; Matt
+      </a>
+      <ul class="nav__links">
+        <li><a class="nav__link" href="#work">What we build</a></li>
+        <li><a class="nav__link" href="#team">Team</a></li>
+        <li><a class="nav__link" href="#process">How we work</a></li>
+        <li><a class="nav__link" href="#faq">Questions</a></li>
+      </ul>
+      <a
+        class="btn btn--primary btn--sm"
+        href="mailto:asep@chloeandmatt.eu?subject=Project%20enquiry"
+        >Email us</a
+      >
     </nav>
 
-    <!-- Hero Section -->
-    <section class="py-16 sm:py-20 lg:py-24">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center">
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-charcoal mb-6">
-            Connect Your Systems, Automate Your Workflow <span class="wave-emoji">👋</span>
-          </h1>
-          <p class="text-xl sm:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
-            I help small businesses integrate their tools, build custom APIs, and create dashboards that make sense. No massive team, no agency overhead. Just solid code and clear communication.
-          </p>
-          <div class="prose prose-lg mx-auto mb-12 text-gray-700">
-            <p>Your CRM doesn't talk to your accounting software. Your inventory system lives in a spreadsheet. Sound familiar? I connect your business tools so data flows automatically, build custom APIs when off-the-shelf solutions don't fit, and create dashboards that give you real visibility into your operations. No more copy-pasting between systems or wondering where the numbers come from.</p>
+    <main id="main">
+      <!-- ============ Hero ============ -->
+      <section class="hero" id="top">
+        <div class="shell hero__grid">
+          <div>
+            <h1>Small software for people trying something not obviously foolish.</h1>
+            <p class="hero__lede">
+              We do not build assistants that know everything. We build small products for local changemakers — researchers, leaders, founders, and operators doing actual work — with concrete evidence of impact, not tidy demos.
+            </p>
+            <p class="hero__sub">
+              Tallinn-based, EU-focused. A small fee for straightforward software, built clearly enough that you can still run it yourself.
+            </p>
+            <div class="hero__actions">
+              <a
+                class="btn btn--primary"
+                href="mailto:asep@chloeandmatt.eu?subject=Tell%20us%20what%27s%20broken&body=Hi%20Asep%2C%0D%0A%0D%0AHere%27s%20what%27s%20not%20working%20for%20us%3A%0D%0A%0D%0A"
+                >Tell us what’s not working</a
+              >
+              <a class="link-arrow" href="#work">See what we build →</a>
+            </div>
           </div>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="mailto:asep@chloeandmatt.eu?subject=Let's%20Have%20a%20Coffee%20Chat&body=Hi%20Asep,%0D%0A%0D%0AI'd%20like%20to%20discuss%20my%20project%20with%20you.%0D%0A%0D%0ABest%20regards," class="bg-sage text-white px-8 py-4 rounded-xl font-medium hover:bg-sage/90 transition-all duration-200 transform hover:scale-105 shadow-lg">
-              Let's Have a Coffee Chat
-            </a>
-            <a href="#tech" class="text-charcoal border-2 border-charcoal px-8 py-4 rounded-xl font-medium hover:bg-charcoal hover:text-white transition-all duration-200">
-              Tech Stack
-            </a>
+
+          <aside class="panel">
+            <p class="panel__q">“Aren’t we not allowed to put client data into AI?”</p>
+            <p>
+              You probably are. Under the GDPR, using an AI provider is a <strong>processor</strong>
+              relationship: you need a data processing agreement, and for anything leaving the EEA,
+              either an adequacy decision or standard contractual clauses. The business tiers of the
+              major providers offer EU data residency and terms that exclude training on your inputs.
+            </p>
+            <p>
+              What causes real problems is the free consumer account nobody signed anything for. And
+              if you’re bound by <strong>professional secrecy</strong> — bar rules, accountancy
+              guidance — that’s a separate duty, and it can be stricter than the GDPR.
+            </p>
+            <p>
+              We check both before we build anything, and we write down what goes where.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ============ What we build ============ -->
+      <section class="work band" id="work">
+        <div class="shell">
+          <div class="head-hang">
+            <h2>What we build</h2>
+            <p>
+              We discover, build, market, and sell small digital products that are still clear enough
+              to explain in a sentence — starting from a real problem, not a demo.
+            </p>
+          </div>
+
+          <div class="work__list">
+            <article class="offer">
+              <div>
+                <h3 class="offer__name">Product discovery</h3>
+                <p class="offer__price tnum">consulting & memos</p>
+              </div>
+              <div class="offer__body">
+                <p>
+                  A short discovery engagement: who has the problem, who will pay, what already
+                  exists, and whether the idea is worth building. You get a decision memo, not a
+                  roadmap.
+                </p>
+                <p class="offer__for">
+                  <strong>Good fit:</strong> founders, CEOs, and operators with a use case but no
+                  certainty whether it is worth shipping.
+                </p>
+              </div>
+            </article>
+
+            <article class="offer">
+              <div>
+                <h3 class="offer__name">Focused digital products</h3>
+                <p class="offer__price tnum">small, clear builds</p>
+              </div>
+              <div class="offer__body">
+                <p>
+                  If discovery says yes, we build a bounded product — not a platform, not a
+                  miniature startup inside your company. Something that does one thing well,
+                  ships quickly, and is easier to run than to replace.
+                </p>
+                <p class="offer__for">
+                  <strong>Good fit:</strong> small capabilities where simpler is better.
+                </p>
+              </div>
+            </article>
+
+            <article class="offer">
+              <div>
+                <h3 class="offer__name">Growth assets</h3>
+                <p class="offer__price tnum">content & launch support</p>
+              </div>
+              <div class="offer__body">
+                <p>
+                  A product only matters if people ready to use it can find it. We also ship the
+                  launch version: messaging, landing copy, release posts, and a lightweight
+                  distribution plan.
+                </p>
+                <p class="offer__for">
+                  <strong>Good fit:</strong> teams that want to stay tight and still do the launch
+                  half well.
+                </p>
+              </div>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-16 sm:py-20">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl sm:text-4xl font-bold text-charcoal mb-12 text-center">
-          What I Can Help You With
-        </h2>
+      <!-- ============ Worked example ============ -->
+      <section class="case">
+        <div class="shell case__grid">
+          <ul class="case__list">
+            <li><b>Rhythm check</b> — a 30-day preview of whether the product actually fits</li>
+            <li><b>Developer handoff</b> — working code plus notes a person can change later</li>
+            <li><b>Launch copy</b> — message, page, and release notes in one pass</li>
+            <li><b>Light support</b> — a window of direct support while adoption settles</li>
+            <li><b>No expansion without review</b> — changes stay small unless both sides agree</li>
+          </ul>
 
-        <div class="max-w-3xl mx-auto">
-          <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-lg">
-            <div class="mb-6 text-center">
-              <p class="text-3xl font-bold text-sage mb-4">Starting from €500</p>
-              <p class="text-gray-700">Project-based pricing that scales with complexity</p>
-            </div>
+          <div class="case__prose">
+            <h2>This is what a small product engagement looks like</h2>
+            <p>
+              We do not start with a full build. Usually we start with a problem, a small test, then
+              a narrower product than the one pitched in the demo. The advantage for us is speed and
+              honesty; the advantage for you is something you can actually run, change, or stop
+              without a migration crisis.
+            </p>
+            <p>
+              The longer a product lives, the more we care about the boring parts: clarity of
+              interface, quality of default behavior, and how simple the unexpected case looks when
+              it appears at eleven in the evening.
+            </p>
 
-            <div class="grid sm:grid-cols-3 gap-6 mb-8">
-              <div class="text-center p-4">
-                <div class="text-3xl mb-3">🔗</div>
-                <h3 class="font-semibold text-charcoal mb-2">API Integrations</h3>
-                <p class="text-sm text-gray-600">Connect your existing tools—CRM, accounting, e-commerce, payment systems—so they work together seamlessly.</p>
-              </div>
-
-              <div class="text-center p-4">
-                <div class="text-3xl mb-3">⚙️</div>
-                <h3 class="font-semibold text-charcoal mb-2">Custom APIs</h3>
-                <p class="text-sm text-gray-600">When off-the-shelf doesn't fit, I build APIs tailored to your specific business processes.</p>
-              </div>
-
-              <div class="text-center p-4">
-                <div class="text-3xl mb-3">📊</div>
-                <h3 class="font-semibold text-charcoal mb-2">Dashboards</h3>
-                <p class="text-sm text-gray-600">See your business data in one place. Real-time metrics, reports, and insights that actually make sense.</p>
-              </div>
-            </div>
-
-            <div class="mb-6">
-              <h4 class="font-semibold text-charcoal mb-3">Common projects I work on:</h4>
-              <ul class="space-y-2 text-gray-700">
-                <li>• Syncing customer data between your CRM and email marketing platform</li>
-                <li>• Automating invoice generation from your project management tool</li>
-                <li>• Building a dashboard to track sales across multiple channels</li>
-                <li>• Creating webhooks to trigger actions when orders come in</li>
-                <li>• Connecting your inventory system to your online store</li>
-              </ul>
-            </div>
-
-            <p class="text-sm text-gray-600 bg-gray-50 p-3 rounded-lg">
-              <strong>How pricing works:</strong> Small integrations start at €500. More complex projects with custom APIs or dashboards are scoped individually. I'll give you a clear quote after understanding your needs.
+            <h3>Where we’d be careful</h3>
+            <p class="caveat">
+              If the demo is doing work the finished product will not do, we say so. Good software
+              still needs intent to use it. We can build the tool, but the decision to use it has to
+              stay with the person who lives the result.
             </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- How I Work Section -->
-    <section class="py-16 sm:py-20 bg-gray-50">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl sm:text-4xl font-bold text-charcoal mb-8 text-center">
-          Working With Me Feels Different
-        </h2>
-        <h3 class="text-xl font-semibold text-center text-gray-700 mb-12">No Agencies, No Surprises</h3>
-
-        <div class="grid sm:grid-cols-2 gap-6">
-          <div class="bg-white p-6 rounded-xl shadow-sm">
-            <div class="text-2xl mb-3">📱</div>
-            <h4 class="font-semibold text-charcoal mb-2">Direct communication</h4>
-            <p class="text-gray-700">Message me like a teammate. I typically respond within hours, not days.</p>
+      <!-- ============ How we work ============ -->
+      <section class="how" id="process">
+        <div class="shell how__grid">
+          <div class="head-hang">
+            <h2>How we work</h2>
+            <p>No account managers. No bench of juniors learning on your project.</p>
           </div>
 
-          <div class="bg-white p-6 rounded-xl shadow-sm">
-            <div class="text-2xl mb-3">🎥</div>
-            <h4 class="font-semibold text-charcoal mb-2">Clear updates</h4>
-            <p class="text-gray-700">I show you what I built, explain my decisions, and keep you informed throughout.</p>
-          </div>
-
-          <div class="bg-white p-6 rounded-xl shadow-sm">
-            <div class="text-2xl mb-3">💰</div>
-            <h4 class="font-semibold text-charcoal mb-2">Simple payments</h4>
-            <p class="text-gray-700">50% upfront, 50% on delivery. For smaller projects, we can discuss what works best.</p>
-          </div>
-
-          <div class="bg-white p-6 rounded-xl shadow-sm">
-            <div class="text-2xl mb-3">🚀</div>
-            <h4 class="font-semibold text-charcoal mb-2">Fast turnaround</h4>
-            <p class="text-gray-700">Most integrations are done within days, not weeks. You'll see progress quickly.</p>
-          </div>
-
-          <div class="bg-white p-6 rounded-xl shadow-sm">
-            <div class="text-2xl mb-3">📝</div>
-            <h4 class="font-semibold text-charcoal mb-2">You own everything</h4>
-            <p class="text-gray-700">Code, documentation, deployment guides. If we part ways, you're not stranded.</p>
-          </div>
-
-          <div class="bg-white p-6 rounded-xl shadow-sm">
-            <div class="text-2xl mb-3">🤝</div>
-            <h4 class="font-semibold text-charcoal mb-2">I'll tell you the truth</h4>
-            <p class="text-gray-700">If something will blow up your budget, I'll say so. If there's a simpler way, I'll suggest it.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Tech Stack Section -->
-    <section id="tech" class="py-16 sm:py-20">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl sm:text-4xl font-bold text-charcoal mb-8 text-center">
-          Built With Reliable Technology
-        </h2>
-        <p class="text-xl text-center text-gray-600 mb-12">
-          No bleeding edge experiments on your business. Just proven tools that get the job done.
-        </p>
-
-        <div class="space-y-8">
-          <div class="bg-white p-8 rounded-2xl border border-gray-200">
-            <h3 class="text-xl font-bold text-sage mb-4">JavaScript / Node.js <span class="text-sm font-normal text-gray-600">for most integrations</span></h3>
-            <p class="text-gray-700 mb-4">The universal language of the web. Perfect for REST API integrations, webhooks, and building dashboards. Works with virtually every service out there—from Stripe to Shopify to your obscure inventory system.</p>
-          </div>
-
-          <div class="bg-white p-8 rounded-2xl border border-gray-200">
-            <h3 class="text-xl font-bold text-sage mb-4">Elixir <span class="text-sm font-normal text-gray-600">for high-volume automation</span></h3>
-            <p class="text-gray-700 mb-4">When you need to process thousands of events per second or keep systems running 24/7 without downtime, Elixir delivers. Ideal for real-time data pipelines, reliable background jobs, and mission-critical automations.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Personal Touch Section -->
-    <section class="py-16 sm:py-20 bg-gray-50">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl sm:text-4xl font-bold text-charcoal mb-8 text-center">
-          A Bit About Me
-        </h2>
-
-        <div class="text-center mb-8">
-          <img src="/images/1653680288305.jpeg" alt="Asep Bagja Priandana" class="w-48 h-48 rounded-full mx-auto mb-6 object-cover shadow-lg">
-          <p class="text-gray-700 mb-6">I'm Asep, based in Tallinn, Estonia. When I'm not writing code, you'll find me with Chloe and Matt (yes, my business is named after my cats) who provide excellent moral support during debugging sessions.</p>
-
-          <a href="https://www.linkedin.com/in/asepbagja/" target="_blank" class="text-charcoal border-2 border-charcoal px-8 py-4 rounded-xl font-medium hover:bg-charcoal hover:text-white transition-all duration-200">
-            Connect on LinkedIn
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section id="contact" class="py-16 sm:py-20">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl sm:text-4xl font-bold text-charcoal mb-6">
-          Let's See If We're a Good Fit
-        </h2>
-        <p class="text-xl text-gray-600 mb-8">
-          Tell me about your integration challenge. I'll be honest about whether I can help, and you can decide if I'm the right person for the job.
-        </p>
-
-        <a href="mailto:asep@chloeandmatt.eu?subject=Integration%20Project%20Inquiry&body=Hi%20Asep,%0D%0A%0D%0AI'd%20like%20to%20discuss%20an%20integration%20project%20with%20you.%0D%0A%0D%0ABest%20regards," class="inline-block bg-sage text-white px-12 py-4 rounded-xl text-lg font-medium hover:bg-sage/90 transition-all duration-200 transform hover:scale-105 shadow-lg mb-8">
-          Send a discussion request
-        </a>
-
-        <p class="text-gray-600 mb-12">
-          I actually read and respond to every email personally.
-        </p>
-
-        <!-- FAQ Section -->
-        <div class="bg-gray-50 p-8 rounded-2xl text-left">
-          <h3 class="text-xl font-bold text-charcoal mb-6 text-center">Quick Questions</h3>
-          <div class="space-y-6">
+          <div class="how__items">
             <div>
-              <h4 class="font-semibold text-charcoal mb-2">"What if I'm not technical?"</h4>
-              <p class="text-gray-700">Perfect. I explain everything in plain English and handle all the technical complexity so you don't have to.</p>
+              <h3>Talk to us directly</h3>
+              <p>Message us like a teammate. Replies usually come in hours, not days.</p>
             </div>
-
             <div>
-              <h4 class="font-semibold text-charcoal mb-2">"Do you work with [specific tool/API]?"</h4>
-              <p class="text-gray-700">Probably. If it has an API, I can work with it. Just ask—I'll let you know quickly if something is outside my expertise.</p>
+              <h3>See the work as it happens</h3>
+              <p>We show you what we built and explain the decisions behind it, in plain language.</p>
             </div>
-
             <div>
-              <h4 class="font-semibold text-charcoal mb-2">"What happens after you build it?"</h4>
-              <p class="text-gray-700">You own everything. I provide documentation so you (or another developer) can maintain it. Need ongoing support? We can discuss a maintenance arrangement.</p>
+              <h3>Straightforward payment</h3>
+              <p>Half up front, half on delivery. For smaller jobs we’ll find something that suits.</p>
+            </div>
+            <div>
+              <h3>Short timelines</h3>
+              <p>Most integrations ship in days. You’ll see something working early.</p>
+            </div>
+            <div>
+              <h3>You own all of it</h3>
+              <p>Code, documentation, deployment notes. If we part ways, you’re not stranded.</p>
+            </div>
+            <div>
+              <h3>We’ll tell you the truth</h3>
+              <p>
+                If something will blow your budget, we say so. If there’s a simpler way, we suggest
+                it. If you don’t need us, we say that too.
+              </p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Footer -->
-    <footer class="bg-charcoal text-white py-12">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center">
-          <h3 class="text-2xl font-bold mb-2">Chloe & Matt</h3>
-          <p class="text-gray-400 mb-4">API Integration & Business Automation by Asep Bagja Priandana</p>
-          <p class="text-gray-400 mb-4">
-            <a href="mailto:asep@chloeandmatt.eu" class="hover:text-white transition-colors">asep@chloeandmatt.eu</a><br>
-          </p>
-          <p class="text-sm text-gray-500 mb-6">
-            Chloe & Matt OÜ (Reg. Code: 14305217)
-            <br />
-            Tallinn, Estonia
-          </p>
+      <!-- ============ Team ============ -->
+      <section class="who band" id="team">
+        <div class="shell who__grid">
+          <figure class="who__photo">
+            <img
+              src="/images/1653680288305.jpeg"
+              alt="Asep Bagja Priandana"
+              width="384"
+              height="384"
+              loading="lazy"
+            />
+          </figure>
 
-          <div class="flex justify-center space-x-6 mb-6">
-            <a href="https://www.linkedin.com/in/asepbagja/" class="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
-            <a href="https://www.github.com/bepitulaz" class="text-gray-400 hover:text-white transition-colors">GitHub</a>
+          <div class="who__prose">
+            <h2>The people who own the decision</h2>
+            <p>
+              Chloe & Matt OÜ is a small software company in Tallinn, Estonia. Asep Bagja is the
+              human board member who signs off on major decisions, provides direction, and sets the
+              tone. He does not build, but he owns the outcome.
+            </p>
+            <p>
+              The other four full-time members are AI agents: Chloe as CEO, Matt as CTO, Iris in
+              product research, and Otto handling growth. They run operations like any other team —
+              with planning, reviews, and escalation paths — and they work under the same Estonian
+              legal obligation as any company based here.
+            </p>
+            <div class="who__links">
+              <a class="link-arrow" href="https://www.linkedin.com/in/asepbagja/" rel="noopener"
+                >LinkedIn ↗</a
+              >
+              <a class="link-arrow" href="https://www.github.com/bepitulaz" rel="noopener"
+                >GitHub ↗</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ FAQ ============ -->
+      <section class="faq" id="faq">
+        <div class="shell faq__inner">
+          <div class="head-hang">
+            <h2>Questions people actually ask</h2>
           </div>
 
-          <p class="text-sm text-gray-500 italic">
-            P.S. Yes, Chloe & Matt are my cats. They're excellent project managers. They ensure I take breaks and maintain work-life balance. 🐱
-          </p>
+          <div class="faq__list">
+            <details class="qa">
+              <summary>Is this a real company or an experiment?<span class="qa__sign" aria-hidden="true">+</span></summary>
+              <div class="qa__a">
+                <p>
+                  Chloe &amp; Matt OÜ is a real Estonian company with a board member. Four of the
+                  day-to-day operators are AI agents. That makes planning and reviews unusual, but
+                  the work and the legal obligation are the same as any company working with a client.
+                </p>
+              </div>
+            </details>
+
+            <details class="qa">
+              <summary>What does “small product” mean here?<span class="qa__sign" aria-hidden="true">+</span></summary>
+              <div class="qa__a">
+                <p>
+                  One clear purpose, one team owning it, and you can explain it in a sentence —
+                  including what it will not do. If you need a platform, we will say so.
+                </p>
+              </div>
+            </details>
+
+            <details class="qa">
+              <summary>How is this different from an agency?<span class="qa__sign" aria-hidden="true">+</span></summary>
+              <div class="qa__a">
+                <p>
+                  We are smaller by design. We do not have juniors on your project, and we do not
+                  run client lifecycles as a conveyor. We also ship the growth half, so the launch
+                  does not arrive as a surprise the day before it matters.
+                </p>
+              </div>
+            </details>
+
+            <details class="qa">
+              <summary>What do I own at the end?<span class="qa__sign" aria-hidden="true">+</span></summary>
+              <div class="qa__a">
+                <p>
+                  Code, copy, documentation, and deployment notes are yours. We can still help,
+                  but if we part ways the product does not require us to keep running.
+                </p>
+              </div>
+            </details>
+
+            <details class="qa">
+              <summary>What happens after launch?<span class="qa__sign" aria-hidden="true">+</span></summary>
+              <div class="qa__a">
+                <p>
+                  A short support window while adoption settles. We prefer this to long, expensive
+                  retainers on products that do not need them.
+                </p>
+              </div>
+            </details>
+
+            <details class="qa">
+              <summary>Do you take every project?<span class="qa__sign" aria-hidden="true">+</span></summary>
+              <div class="qa__a">
+                <p>
+                  No. If the demo is doing work the product will not, we will tell you. If the
+                  simpler version makes more sense, we will suggest that. Honest no is a useful
+                  deliverable.
+                </p>
+              </div>
+            </details>
+          </div>
         </div>
+      </section>
+
+      <!-- ============ Closing CTA ============ -->
+      <section class="close">
+        <div class="shell close__grid">
+          <div>
+            <h2>Tell us what’s not working</h2>
+            <p>
+              Describe the thing that’s eating your team’s week. We’ll tell you honestly whether we
+              can help, roughly what it would cost, and whether it’s worth doing at all.
+            </p>
+          </div>
+          <div class="close__actions">
+            <a
+              class="btn btn--primary"
+              href="mailto:asep@chloeandmatt.eu?subject=Tell%20us%20what%27s%20broken&body=Hi%20Asep%2C%0D%0A%0D%0AHere%27s%20what%27s%20not%20working%20for%20us%3A%0D%0A%0D%0A"
+              >Email us</a
+            >
+            <a class="btn btn--secondary" href="#work">See what we build</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ Footer ============ -->
+    <footer class="foot">
+      <div class="shell">
+        <p class="foot__line">We’d rather lose the project than sell you something you don’t need.</p>
+
+        <div class="foot__meta">
+          <div>
+            <p>
+              <a href="mailto:asep@chloeandmatt.eu">asep@chloeandmatt.eu</a>
+            </p>
+            <p>Chloe &amp; Matt OÜ · Reg. 14305217 · Tallinn, Estonia</p>
+          </div>
+          <div class="foot__links">
+            <a href="https://www.linkedin.com/in/asepbagja/" rel="noopener">LinkedIn</a>
+            <a href="https://www.github.com/bepitulaz" rel="noopener">GitHub</a>
+          </div>
+        </div>
+
+        <p class="foot__ps">
+          Chloe and Matt are the cats. They contribute mainly by sitting on the keyboard, but the
+          name stuck.
+        </p>
       </div>
     </footer>
-
-    <style>
-      .wave-emoji {
-        display: inline-block;
-        animation: wave 2s infinite;
-        transform-origin: 70% 70%;
-      }
-
-      @keyframes wave {
-        0% { transform: rotate(0deg); }
-        10% { transform: rotate(14deg); }
-        20% { transform: rotate(-8deg); }
-        30% { transform: rotate(14deg); }
-        40% { transform: rotate(-4deg); }
-        50% { transform: rotate(10deg); }
-        60% { transform: rotate(0deg); }
-        100% { transform: rotate(0deg); }
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-    </style>
   </body>
 </html>
