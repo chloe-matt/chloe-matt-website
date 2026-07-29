@@ -1,0 +1,95 @@
+/* Hallmark · tokens · Chloe & Matt
+ * theme: custom · vibe: "honest, warm, plain-spoken, EU"
+ * anchor: images/c-m-logo.png → #EF500B → oklch(64.5% 0.206 38.4)
+ * axes: light / geometric-sans / warm
+ *
+ * Contrast verified (WCAG 2.1, sRGB):
+ *   ink/paper 15.94  ·  ink-2/paper 8.31  ·  muted/paper 5.00
+ *   accent-deep/paper 5.38  ·  ink/accent 4.90  ·  focus/paper 5.91
+ *   paper/band 14.91  ·  band-muted/band 5.70
+ * NOTE: paper-on-accent is 3.25 — FAILS. Never put light text on the accent.
+ *       The primary button is accent fill + ink text.
+ */
+
+:root {
+  /* ---- Surfaces ---- */
+  --color-paper:       oklch(96.5% 0.008 60);
+  --color-paper-2:     oklch(93.5% 0.011 55);
+  --color-paper-3:     oklch(90.0% 0.013 50);
+  --color-band:        oklch(24.0% 0.014 45);
+
+  /* ---- Text ---- */
+  --color-ink:         oklch(21.0% 0.013 45);
+  --color-ink-2:       oklch(40.0% 0.012 45);
+  --color-muted:       oklch(52.0% 0.010 45);
+  --color-band-ink:    oklch(96.5% 0.008 60);
+  --color-band-muted:  oklch(68.0% 0.010 45);
+
+  /* ---- Lines ---- */
+  --color-rule:        oklch(86.0% 0.012 50);
+  --color-rule-2:      oklch(91.5% 0.010 55);
+  --color-band-rule:   oklch(36.0% 0.014 45);
+
+  /* ---- Accent · the logo, kept to a signal ---- */
+  --color-accent:      oklch(64.5% 0.206 38.4);
+  --color-accent-deep: oklch(52.0% 0.180 38.4);
+  --color-accent-ink:  oklch(21.0% 0.013 45);
+  --color-focus:       oklch(50.0% 0.200 38.4);
+
+  /* ---- Type ---- */
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-body:    "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-outlier: "Geist Mono", ui-monospace, monospace;
+
+  /* Major third, 1.25 */
+  --text-xs:      0.8rem;
+  --text-sm:      0.9rem;
+  --text-base:    1rem;
+  --text-md:      1.125rem;
+  --text-lg:      1.375rem;
+  --text-xl:      1.75rem;
+  --text-2xl:     2.125rem;
+  --text-3xl:     2.75rem;
+  --text-display: clamp(2.5rem, 4.5vw + 1rem, 4.5rem);
+
+  /* ---- Space · 4pt ---- */
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs:  0.5rem;
+  --space-sm:  0.75rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 9rem;
+
+  --page-gutter: clamp(1.25rem, 5vw, 4rem);
+  --measure: 62ch;
+
+  /* ---- Lines / radii ---- */
+  --rule-hair:    1px;
+  --radius-card:  12px;
+  --radius-input: 8px;
+  --radius-pill:  999px;
+
+  /* ---- Motion ---- */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:     cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 200ms;
+  --dur-long:  400ms;
+
+  /* ---- Depth ---- */
+  --shadow-whisper: 0 1px 2px oklch(21% 0.013 45 / 0.06);
+  --shadow-pill:    0 8px 24px -14px oklch(21% 0.013 45 / 0.30);
+
+  --z-base:     1;
+  --z-raised:   10;
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-modal:    400;
+  --z-toast:    500;
+  --z-tooltip:  600;
+}
