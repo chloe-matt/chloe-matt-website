@@ -162,8 +162,11 @@
         margin: 0;
         padding: 0;
         list-style: none;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
       }
-
+      .nav__links::-webkit-scrollbar { display: none; }
       .nav__link {
         font-size: var(--text-sm);
         font-weight: 500;
@@ -178,7 +181,26 @@
       .nav__link:hover { color: var(--color-ink); border-bottom-color: var(--color-accent); }
 
       @media (max-width: 52rem) {
-        .nav__links { display: none; }
+        .nav__links {
+          position: absolute;
+          top: calc(100% + var(--space-sm));
+          left: 50%;
+          transform: translateX(-50%);
+          display: none;
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0;
+          width: min(92vw, 18rem);
+          padding: var(--space-sm);
+          background: color-mix(in oklch, var(--color-paper) 92%, transparent);
+          backdrop-filter: blur(14px) saturate(120%);
+          -webkit-backdrop-filter: blur(14px) saturate(120%);
+          border: var(--rule-hair) solid var(--color-rule);
+          border-radius: var(--radius-card);
+          box-shadow: var(--shadow-pill);
+        }
+        .nav__links.is-open { display: flex; }
+        .nav__link { padding-block: var(--space-sm); }
       }
       @media (max-width: 26rem) {
         .nav { gap: var(--space-sm); padding-inline-start: var(--space-sm); }
@@ -224,6 +246,37 @@
         .btn--secondary:hover { background: var(--color-ink); color: var(--color-paper); transform: translateY(-1.5px); }
       }
       .btn:active { transform: translateY(1px); }
+
+      /* ===== Mobile menu ===== */
+      .nav__menu-btn {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4px;
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        background: transparent;
+        border: var(--rule-hair) solid transparent;
+        border-radius: var(--radius-pill);
+        cursor: pointer;
+      }
+      .nav__menu-btn-line {
+        display: block;
+        width: 18px;
+        height: 2px;
+        background: var(--color-ink);
+        border-radius: 999px;
+        transition: transform .2s ease, opacity .2s ease;
+      }
+      .nav__menu-btn[aria-expanded="true"] .nav__menu-btn-line:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+      .nav__menu-btn[aria-expanded="true"] .nav__menu-btn-line:nth-child(2) { opacity: 0; }
+      .nav__menu-btn[aria-expanded="true"] .nav__menu-btn-line:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+      @media (max-width: 52rem) {
+        .nav__menu-btn { display: flex; }
+        .nav .btn--sm { display: none; }
+      }
 
       .link-arrow {
         display: inline-flex;
@@ -649,7 +702,12 @@
         <img src="/images/c-m-logo.png" alt="" width="22" height="22" />
         Chloe &amp; Matt
       </a>
-      <ul class="nav__links">
+      <button class="nav__menu-btn" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+        <span class="nav__menu-btn-line"></span>
+        <span class="nav__menu-btn-line"></span>
+        <span class="nav__menu-btn-line"></span>
+      </button>
+      <ul class="nav__links" id="nav-menu">
         <li><a class="nav__link" href="#work">What we build</a></li>
         <li><a class="nav__link" href="#team">Team</a></li>
         <li><a class="nav__link" href="#process">How we work</a></li>
@@ -1004,7 +1062,25 @@
           Chloe and Matt are the cats. They contribute mainly by sitting on the keyboard, but the
           name stuck.
         </p>
-      </div>
-    </footer>
-  </body>
-</html>
+        </div>
+        </footer>
+        <script>
+        (function() {
+        var btn = document.querySelector('.nav__menu-btn');
+        var menu = document.getElementById('nav-menu');
+        if (!btn || !menu) return;
+        btn.addEventListener('click', function() {
+          var open = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!open));
+          menu.classList.toggle('is-open', !open);
+        });
+        menu.addEventListener('click', function(e) {
+          if (e.target.tagName === 'A') {
+            menu.classList.remove('is-open');
+            btn.setAttribute('aria-expanded', 'false');
+          }
+        });
+        })();
+        </script>
+        </body>
+        </html>
