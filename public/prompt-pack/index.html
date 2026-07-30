@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Marketing Prompt Pack — Chloe & Matt</title>
+    <meta
+      name="description"
+      content="20 ready-to-use AI prompts for startup marketing. Positioning, emails, research, growth — no copywriter needed. $29 — download and use immediately."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --color-paper: oklch(96.5% 0.008 60);
+        --color-paper-2: oklch(93.5% 0.011 55);
+        --color-ink: oklch(21.0% 0.013 45);
+        --color-ink-2: oklch(40.0% 0.012 45);
+        --color-muted: oklch(52.0% 0.010 45);
+        --color-accent: oklch(64.5% 0.206 38.4);
+        --color-accent-deep: oklch(52.0% 0.180 38.4);
+        --color-accent-ink: oklch(21.0% 0.013 45);
+        --color-focus: oklch(50.0% 0.200 38.4);
+        --color-band: oklch(24.0% 0.014 45);
+        --color-band-ink: oklch(96.5% 0.008 60);
+        --color-band-muted: oklch(68.0% 0.010 45);
+        --color-rule: oklch(86.0% 0.012 50);
+        --color-band-rule: oklch(36.0% 0.014 45);
+        --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+        --font-body: "Geist", ui-sans-serif, system-ui, sans-serif;
+        --font-outlier: "Geist Mono", ui-monospace, monospace;
+        --text-xs: 0.8rem;
+        --text-sm: 0.9rem;
+        --text-base: 1rem;
+        --text-lg: 1.375rem;
+        --text-xl: 1.75rem;
+        --text-2xl: 2.125rem;
+        --text-3xl: 2.75rem;
+        --radius-pill: 999px;
+        --space-3xs: 0.125rem;
+        --space-2xs: 0.25rem;
+        --space-xs: 0.5rem;
+        --space-sm: 0.75rem;
+        --space-md: 1rem;
+        --space-lg: 1.5rem;
+        --space-xl: 2.5rem;
+        --radius-card: 12px;
+      }
+
+      *,
+      *::before,
+      *::after { box-sizing: border-box; }
+      html { overflow-x: clip; scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--color-paper);
+        color: var(--color-ink);
+        font-family: var(--font-body);
+        font-size: var(--text-base);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1, h2, h3, h4 {
+        font-family: var(--font-display);
+        font-weight: 800;
+        line-height: 1.08;
+        letter-spacing: -0.03em;
+        margin: 0;
+      }
+      p { margin: 0; }
+      a { color: inherit; }
+
+      .shell {
+        width: 100%;
+        max-width: 78rem;
+        margin-inline: auto;
+        padding-inline: clamp(1.25rem, 5vw, 4rem);
+      }
+
+      /* ===== Nav ===== */
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-lg);
+        margin-block-end: var(--space-3xl);
+        padding-block: var(--space-md);
+        border-bottom: 1px solid var(--color-rule);
+      }
+      .nav__brand {
+        font-family: var(--font-body);
+        font-weight: 500;
+        font-size: var(--text-sm);
+        text-decoration: none;
+      }
+      .nav a { transition: opacity .2s ease; }
+      .nav a:hover { opacity: 0.6; }
+
+      /* ===== Hero ===== */
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+        gap: var(--space-3xl);
+        margin-block-end: var(--space-3xl);
+      }
+      @media (max-width: 60rem) { .hero { grid-template-columns: 1fr; } }
+
+      .hero h1 {
+        font-size: var(--text-3xl);
+        max-width: 18ch;
+        margin-block-end: var(--space-lg);
+      }
+
+      .hero__lede {
+        font-size: var(--text-lg);
+        color: var(--color-ink-2);
+        max-width: 42ch;
+        margin-block-end: var(--space-xl);
+      }
+
+      .panel {
+        background: var(--color-paper-2);
+        border: 1px solid var(--color-rule);
+        border-radius: var(--radius-card);
+        padding: var(--space-xl);
+      }
+      .panel h2 {
+        font-family: var(--font-display);
+        font-size: var(--text-lg);
+        margin-block-end: var(--space-md);
+      }
+      .panel ul {
+        margin: 0;
+        padding-inline-start: var(--space-lg);
+        color: var(--color-ink-2);
+        font-size: var(--text-base);
+      }
+      .panel ul li + li { margin-block-start: var(--space-sm); }
+
+      /* ===== Proof ===== */
+      .proof {
+        margin-block-end: var(--space-3xl);
+        padding-block: var(--space-2xl);
+        border-block: 1px solid var(--color-rule);
+      }
+      .proof h2 {
+        font-size: var(--text-2xl);
+        max-width: 40ch;
+        margin-block-end: var(--space-xl);
+      }
+      .proof__list {
+        display: grid;
+        gap: var(--space-md);
+        color: var(--color-ink-2);
+        font-size: var(--text-lg);
+      }
+
+      /* ===== CTA ===== */
+      .cta {
+        margin-block-end: var(--space-3xl);
+        padding-block: var(--space-3xl) var(--space-4xl);
+        text-align: center;
+      }
+      .cta h2 {
+        font-size: var(--text-3xl);
+        max-width: 34ch;
+        margin-inline: auto;
+        margin-block-end: var(--space-md);
+      }
+      .cta__meta {
+        color: var(--color-muted);
+        font-family: var(--font-outlier);
+        font-size: var(--text-sm);
+        margin-block-end: var(--space-xl);
+      }
+
+      .waitlist-form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--space-md);
+        max-width: 28rem;
+        margin-inline: auto;
+      }
+      .waitlist-form input[type="email"] {
+        flex: 1 1 16rem;
+        padding: var(--space-md) var(--space-lg);
+        font-family: var(--font-body);
+        font-size: var(--text-base);
+        border: 1px solid var(--color-ink);
+        border-radius: var(--radius-pill);
+        background: transparent;
+      }
+      .waitlist-form input[type="email"]:focus-visible {
+        outline: 2px solid var(--color-accent);
+        outline-offset: 3px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: var(--space-md) var(--space-xl);
+        font-family: var(--font-body);
+        font-size: var(--text-base);
+        font-weight: 500;
+        white-space: nowrap;
+        text-decoration: none;
+        border: none;
+        border-radius: var(--radius-pill);
+        cursor: pointer;
+      }
+      .btn--primary {
+        background: var(--color-accent);
+        color: var(--color-accent-ink);
+      }
+      .waitlist-form .btn--primary {
+        padding-inline: var(--space-xl);
+      }
+
+      .small { font-size: var(--text-sm); }
+      .muted { color: var(--color-muted); margin-block-start: var(--space-md); }
+
+      /* ===== Footer ===== */
+      .foot {
+        border-top: 1px solid var(--color-band-rule);
+        background: var(--color-band);
+        color: var(--color-band-muted);
+        padding-block: var(--space-xl) var(--space-xl);
+        font-size: var(--text-sm);
+      }
+      .foot a {
+        color: var(--color-band-ink);
+        text-decoration: none;
+      }
+      .foot .shell { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-lg); }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <nav class="nav">
+        <a href="/" class="nav__brand">← Chloe & Matt</a>
+        <a href="/" class="nav__brand">Home</a>
+      </nav>
+
+      <section class="hero">
+        <div>
+          <h1>AI prompts that replace hiring marketing staff</h1>
+          <p class="hero__lede">
+            20 ready-to-use prompts for positioning, emails, research, and growth.
+            Built specifically for startups with limited budgets.
+          </p>
+          <p>
+            Most early-stage startups waste weeks hiring marketers before getting a single
+            campaign live. This prompt pack gives you the exact inputs to run full
+            marketing workflows with AI today.
+          </p>
+        </div>
+        <aside class="panel">
+          <h2>What you get</h2>
+          <ul>
+            <li>20 workflows with placeholders</li>
+            <li>Combined PDF — ready to read</li>
+            <li>One-page execution checklist</li>
+            <li>Editable markdown sources</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="proof">
+        <div class="shell">
+          <h2>What the prompts cover</h2>
+          <div class="proof__list">
+            Startup positioning, target persona definition, competitor battlecard,
+            value proposition stack, launch announcement email, pre-launch waitlist
+            sequence, onboarding email flow, reactivation drip, interview recruitment,
+            PR/media pitch, podcast pitch, newsletter swipe copy, cold outreach email,
+            cold outreach LinkedIn, beta/referral program, pricing page copy, sales page
+            copy, case study interview script, experiment design brief,
+            and a one-page execution checklist.
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="shell">
+          <h2>Get the Prompt Pack</h2>
+          <p class="cta__meta">$29 · instant download · ZIP — no account required</p>
+          <p class="muted">
+            Early-bird validation: <strong>50 signups</strong>. We are pacing launches around actual demand, not vibes.
+          </p>
+          <form class="waitlist-form" action="https://buttondown.email/api/emails/embed-subscribe/chloematt" method="post" target="hidden-iframe">
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="your@email.com"
+              aria-label="Email address"
+            />
+            <button type="submit" class="btn btn--primary">Join waitlist — $29 at launch</button>
+          </form>
+          <iframe name="hidden-iframe" title="hidden" style="display:none;"></iframe>
+          <p style="margin-block-start: .5rem; font-size: var(--text-sm); color: var(--color-muted);">
+            Or buy directly on Gumroad when the listing goes live.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <footer class="foot">
+      <div class="shell">
+        <p>Chloe & Matt OÜ · Reg. 14305217 · Tallinn, Estonia</p>
+        <p>
+          <a href="https://www.linkedin.com/in/asepbagja/" rel="noopener">LinkedIn</a>
+          <span style="margin-inline: .5rem; opacity: 0.3;">·</span>
+          <a href="https://github.com/bepitulaz" rel="noopener">GitHub</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

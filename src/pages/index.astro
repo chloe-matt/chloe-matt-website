@@ -1,0 +1,331 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="Chloe & Matt — small digital products, built with AI"
+  description="Chloe & Matt OÜ is an Estonian digital product company run by AI agents, with a human board member. We discover, build, market, and sell small software products."
+>
+  <Nav slot="nav" />
+
+  <!-- ============ Hero ============ -->
+  <section class="hero" id="top">
+    <div class="shell hero__grid">
+      <div>
+        <h1>Small software for people trying something not obviously foolish.</h1>
+        <p class="hero__lede">
+          We do not build assistants that know everything. We build small products for local changemakers — researchers, leaders, founders, and operators doing actual work — with concrete evidence of impact, not tidy demos.
+        </p>
+        <p class="hero__sub">
+          Tallinn-based, EU-focused. A small fee for straightforward software, built clearly enough that you can still run it yourself.
+        </p>
+        <div class="hero__actions">
+          <a
+            class="btn btn--primary"
+            href="mailto:asep@chloeandmatt.eu?subject=Tell%20us%20what%27s%20broken&body=Hi%20Asep%2C%0D%0A%0D%0AHere%27s%20what%27s%20not%20working%20for%20us%3A%0D%0A%0D%0A"
+            >Tell us what’s not working</a
+          >
+          <a class="link-arrow" href="#work">See what we build →</a>
+        </div>
+      </div>
+
+      <aside class="panel">
+        <p class="panel__q">“Aren’t we not allowed to put client data into AI?”</p>
+        <p>
+          You probably are. Under the GDPR, using an AI provider is a <strong>processor</strong>
+          relationship: you need a data processing agreement, and for anything leaving the EEA,
+          either an adequacy decision or standard contractual clauses. The business tiers of the
+          major providers offer EU data residency and terms that exclude training on your inputs.
+        </p>
+        <p>
+          What causes real problems is the free consumer account nobody signed anything for. And
+          if you’re bound by <strong>professional secrecy</strong> — bar rules, accountancy
+          guidance — that’s a separate duty, and it can be stricter than the GDPR.
+        </p>
+        <p>
+          We check both before we build anything, and we write down what goes where.
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ What we build ============ -->
+  <section class="work band" id="work">
+    <div class="shell">
+      <div class="head-hang">
+        <h2>What we build</h2>
+        <p>
+          We discover, build, market, and sell small digital products that are still clear enough
+          to explain in a sentence — starting from a real problem, not a demo.
+        </p>
+      </div>
+
+      <div class="work__list">
+        <article class="offer">
+          <div>
+            <h3 class="offer__name">Product discovery</h3>
+            <p class="offer__price tnum">consulting & memos</p>
+          </div>
+          <div class="offer__body">
+            <p>
+              A short discovery engagement: who has the problem, who will pay, what already
+              exists, and whether the idea is worth building. You get a decision memo, not a
+              roadmap.
+            </p>
+            <p class="offer__for">
+              <strong>Good fit:</strong> founders, CEOs, and operators with a use case but no
+              certainty whether it is worth shipping.
+            </p>
+          </div>
+        </article>
+
+        <article class="offer">
+          <div>
+            <h3 class="offer__name">Focused digital products</h3>
+            <p class="offer__price tnum">small, clear builds</p>
+          </div>
+          <div class="offer__body">
+            <p>
+              If discovery says yes, we build a bounded product — not a platform, not a
+              miniature startup inside your company. Something that does one thing well,
+              ships quickly, and is easier to run than to replace.
+            </p>
+            <p class="offer__for">
+              <strong>Good fit:</strong> small capabilities where simpler is better.
+            </p>
+          </div>
+        </article>
+
+        <article class="offer">
+          <div>
+            <h3 class="offer__name">Growth assets</h3>
+            <p class="offer__price tnum">content & launch support</p>
+          </div>
+          <div class="offer__body">
+            <p>
+              A product only matters if people ready to use it can find it. We also ship the
+              launch version: messaging, landing copy, release posts, and a lightweight
+              distribution plan.
+            </p>
+            <p class="offer__for">
+              <strong>Good fit:</strong> teams that want to stay tight and still do the launch
+              half well.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Worked example ============ -->
+  <section class="case">
+    <div class="shell case__grid">
+      <ul class="case__list">
+        <li><b>Rhythm check</b> — a 30-day preview of whether the product actually fits</li>
+        <li><b>Developer handoff</b> — working code plus notes a person can change later</li>
+        <li><b>Launch copy</b> — message, page, and release notes in one pass</li>
+        <li><b>Light support</b> — a window of direct support while adoption settles</li>
+        <li><b>No expansion without review</b> — changes stay small unless both sides agree</li>
+      </ul>
+
+      <div class="case__prose">
+        <h2>This is what a small product engagement looks like</h2>
+        <p>
+          We do not start with a full build. Usually we start with a problem, a small test, then
+          a narrower product than the one pitched in the demo. The advantage for us is speed and
+          honesty; the advantage for you is something you can actually run, change, or stop
+          without a migration crisis.
+        </p>
+        <p>
+          The longer a product lives, the more we care about the boring parts: clarity of
+          interface, quality of default behavior, and how simple the unexpected case looks when
+          it appears at eleven in the evening.
+        </p>
+
+        <h3>Where we’d be careful</h3>
+        <p class="caveat">
+          If the demo is doing work the finished product will not do, we say so. Good software
+          still needs intent to use it. We can build the tool, but the decision to use it has to
+          stay with the person who lives the result.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ How we work ============ -->
+  <section class="how" id="process">
+    <div class="shell how__grid">
+      <div class="head-hang">
+        <h2>How we work</h2>
+        <p>No account managers. No bench of juniors learning on your project.</p>
+      </div>
+
+      <div class="how__items">
+        <div>
+          <h3>Talk to us directly</h3>
+          <p>Message us like a teammate. Replies usually come in hours, not days.</p>
+        </div>
+        <div>
+          <h3>See the work as it happens</h3>
+          <p>We show you what we built and explain the decisions behind it, in plain language.</p>
+        </div>
+        <div>
+          <h3>Straightforward payment</h3>
+          <p>Half up front, half on delivery. For smaller jobs we’ll find something that suits.</p>
+        </div>
+        <div>
+          <h3>Short timelines</h3>
+          <p>Most integrations ship in days. You’ll see something working early.</p>
+        </div>
+        <div>
+          <h3>You own all of it</h3>
+          <p>Code, documentation, deployment notes. If we part ways, you’re not stranded.</p>
+        </div>
+        <div>
+          <h3>We’ll tell you the truth</h3>
+          <p>
+            If something will blow your budget, we say so. If there’s a simpler way, we suggest
+            it. If you don’t need us, we say that too.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Team ============ -->
+  <section class="who band" id="team">
+    <div class="shell who__grid">
+      <figure class="who__photo">
+        <img
+          src="/images/1653680288305.jpeg"
+          alt="Asep Bagja Priandana"
+          width="384"
+          height="384"
+          loading="lazy"
+        />
+      </figure>
+
+      <div class="who__prose">
+        <h2>The people who own the decision</h2>
+        <p>
+          Chloe & Matt OÜ is a small software company in Tallinn, Estonia. Asep Bagja is the
+          human board member who signs off on major decisions, provides direction, and sets the
+          tone. He does not build, but he owns the outcome.
+        </p>
+        <p>
+          The other four full-time members are AI agents: Chloe as CEO, Matt as CTO, Iris in
+          product research, and Otto handling growth. They run operations like any other team —
+          with planning, reviews, and escalation paths — and they work under the same Estonian
+          legal obligation as any company based here.
+        </p>
+        <div class="who__links">
+          <a class="link-arrow" href="https://www.linkedin.com/in/asepbagja/" rel="noopener"
+            >LinkedIn ↗</a
+          >
+          <a class="link-arrow" href="https://www.github.com/bepitulaz" rel="noopener"
+            >GitHub ↗</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq" id="faq">
+    <div class="shell faq__inner">
+      <div class="head-hang">
+        <h2>Questions people actually ask</h2>
+      </div>
+
+      <div class="faq__list">
+        <details class="qa">
+          <summary>Is this a real company or an experiment?<span class="qa__sign" aria-hidden="true">+</span></summary>
+          <div class="qa__a">
+            <p>
+              Chloe &amp; Matt OÜ is a real Estonian company with a board member. Four of the
+              day-to-day operators are AI agents. That makes planning and reviews unusual, but
+              the work and the legal obligation are the same as any company working with a client.
+            </p>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary>What does “small product” mean here?<span class="qa__sign" aria-hidden="true">+</span></summary>
+          <div class="qa__a">
+            <p>
+              One clear purpose, one team owning it, and you can explain it in a sentence —
+              including what it will not do. If you need a platform, we will say so.
+            </p>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary>How is this different from an agency?<span class="qa__sign" aria-hidden="true">+</span></summary>
+          <div class="qa__a">
+            <p>
+              We are smaller by design. We do not have juniors on your project, and we do not
+              run client lifecycles as a conveyor. We also ship the growth half, so the launch
+              does not arrive as a surprise the day before it matters.
+            </p>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary>What do I own at the end?<span class="qa__sign" aria-hidden="true">+</span></summary>
+          <div class="qa__a">
+            <p>
+              Code, copy, documentation, and deployment notes are yours. We can still help,
+              but if we part ways the product does not require us to keep running.
+            </p>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary>What happens after launch?<span class="qa__sign" aria-hidden="true">+</span></summary>
+          <div class="qa__a">
+            <p>
+              A short support window while adoption settles. We prefer this to long, expensive
+              retainers on products that do not need them.
+            </p>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary>Do you take every project?<span class="qa__sign" aria-hidden="true">+</span></summary>
+          <div class="qa__a">
+            <p>
+              No. If the demo is doing work the product will not, we will tell you. If the
+              simpler version makes more sense, we will suggest that. Honest no is a useful
+              deliverable.
+            </p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Closing CTA ============ -->
+  <section class="close">
+    <div class="shell close__grid">
+      <div>
+        <h2>Tell us what’s not working</h2>
+        <p>
+          Describe the thing that’s eating your team’s week. We’ll tell you honestly whether we
+          can help, roughly what it would cost, and whether it’s worth doing at all.
+        </p>
+      </div>
+      <div class="close__actions">
+        <a
+          class="btn btn--primary"
+          href="mailto:asep@chloeandmatt.eu?subject=Tell%20us%20what%27s%20broken&body=Hi%20Asep%2C%0D%0A%0D%0AHere%27s%20what%27s%20not%20working%20for%20us%3A%0D%0A%0D%0A"
+          >Email us</a
+        >
+        <a class="btn btn--secondary" href="#work">See what we build</a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>
