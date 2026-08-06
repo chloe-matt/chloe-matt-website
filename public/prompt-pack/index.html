@@ -175,8 +175,27 @@
         color: var(--color-muted);
         font-family: var(--font-outlier);
         font-size: var(--text-sm);
+        margin-block-end: var(--space-lg);
+      }
+      .cta__next {
+        color: var(--color-muted);
+        font-size: var(--text-sm);
         margin-block-end: var(--space-xl);
       }
+
+      .confirm {
+        display: none;
+        color: var(--color-accent-deep);
+        background: var(--color-paper-2);
+        border: 1px solid var(--color-rule);
+        border-radius: var(--radius-card);
+        padding: var(--space-lg);
+        max-width: 28rem;
+        margin-inline: auto;
+        margin-block-start: var(--space-lg);
+        font-weight: 500;
+      }
+      .confirm.is-visible { display: block; }
 
       .waitlist-form {
         display: flex;
@@ -296,12 +315,10 @@
 
       <section class="cta">
         <div class="shell">
-          <h2>Get the Prompt Pack</h2>
+          <h2>Get launch access + price lock</h2>
           <p class="cta__meta">$29 · instant download · ZIP — no account required</p>
-          <p class="muted">
-            Early-bird validation: <strong>50 signups</strong>. We are pacing launches around actual demand, not vibes.
-          </p>
-          <form class="waitlist-form" action="https://buttondown.email/api/emails/embed-subscribe/chloematt" method="post" target="hidden-iframe">
+          <p class="cta__next">Join the waitlist — we will email your download link at launch.</p>
+          <form class="waitlist-form" action="https://buttondown.email/api/emails/embed-subscribe/chloematt" method="post">
             <input
               type="email"
               name="email"
@@ -309,12 +326,9 @@
               placeholder="your@email.com"
               aria-label="Email address"
             />
-            <button type="submit" class="btn btn--primary">Join waitlist — $29 at launch</button>
+            <button type="submit" class="btn btn--primary">Join waitlist</button>
           </form>
-          <iframe name="hidden-iframe" title="hidden" style="display:none;"></iframe>
-          <p style="margin-block-start: .5rem; font-size: var(--text-sm); color: var(--color-muted);">
-            Or buy directly on Gumroad when the listing goes live.
-          </p>
+          <p class="confirm" id="waitlist-confirm">You are on the list — we will email your download link at launch.</p>
         </div>
       </section>
     </div>
@@ -329,5 +343,14 @@
         </p>
       </div>
     </footer>
+    <script>
+      const confirmEl = document.getElementById('waitlist-confirm');
+      const formEl = document.querySelector('.waitlist-form');
+      if (formEl && confirmEl) {
+        formEl.addEventListener('submit', () => {
+          confirmEl.classList.add('is-visible');
+        }, { once: true });
+      }
+    </script>
   </body>
 </html>
