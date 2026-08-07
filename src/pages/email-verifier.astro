@@ -1,0 +1,305 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="Email Verifier — Verify emails that matter. Only pay for the answer."
+  description="Transparent, outcome-based email verification on Apify. Only pay for decisive verdicts: valid, invalid, or disposable. Catch-all and unknown results are free."
+>
+  <Nav slot="nav" />
+
+  <!-- ============ Hero ============ -->
+  <section class="hero ev-hero" id="top">
+    <div class="shell hero__grid">
+      <div>
+        <h1>Verify emails that matter. Only pay for the answer.</h1>
+        <p class="hero__lede">
+          Transparent, outcome-based email verification. We classify every address as valid,
+          invalid, disposable, or catch-all — and only charge for the decisive verdicts.
+        </p>
+        <p class="hero__sub">
+          Built for real workflows. No setup, no proxy pool, no surprises. Just a ranked
+          result set with a confidence score and role-address flag.
+        </p>
+        <div class="hero__actions">
+          <a
+            class="btn btn--primary"
+            href="https://apify.com"
+            target="_blank"
+            rel="noopener"
+          >
+            Run on Apify now
+          </a>
+          <a class="link-arrow" href="#pricing">See pricing →</a>
+        </div>
+      </div>
+
+      <aside class="panel">
+        <p class="panel__q">Why another email verifier?</p>
+        <p>
+          Most verifiers charge you for unknowns and catch-alls — the results that give you
+          the least useful information. We only bill for valid, invalid, and disposable
+          verdicts. Unknown and catch-all results are free.
+        </p>
+        <p>
+          We also publish a dated false-positive rate so you know exactly how accurate the
+          output is before you run.
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ Value proposition ============ -->
+  <section class="ev-section">
+    <div class="shell">
+      <div class="head-hang">
+        <h2>Decisive verdicts, not guesswork</h2>
+        <p>
+          A verifier should tell you what you can actually use — and stop billing you for
+          the parts that don't help.
+        </p>
+      </div>
+
+      <div class="ev-list">
+        <article class="ev-item">
+          <h3>Only pay for usable decisions</h3>
+          <p>
+            Valid, invalid, and disposable each count as one credit. Catch-all and unknown
+            results are free. A confidence score and role-address flag come with every result.
+          </p>
+        </article>
+        <article class="ev-item">
+          <h3>Built for real workflows</h3>
+          <p>
+            Accepts a plain list, returns a ranked result. No setup or proxy pool required.
+            Upload or paste, run, and download.
+          </p>
+        </article>
+        <article class="ev-item">
+          <h3>Honest numbers</h3>
+          <p>
+            We publish a dated false-positive rate on the actor page so you know exactly how
+            accurate the output is before you run.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Pricing ============ -->
+  <section class="ev-section band" id="pricing">
+    <div class="shell">
+      <div class="head-hang">
+        <h2>Pricing</h2>
+        <p>
+          Simple, outcome-based pricing. You only pay for the verdicts that let you take
+          action.
+        </p>
+      </div>
+
+      <div class="ev-pricing">
+        <div class="ev-price-card">
+          <p class="offer__price tnum">Starting from $0.01</p>
+          <p>per 1,000 decisive verdicts</p>
+        </div>
+        <div class="ev-price-rules">
+          <p>
+            <strong>Valid</strong>, <strong>invalid</strong>, and <strong>disposable</strong>
+            each count as one credit.
+          </p>
+          <p>
+            <strong>Catch-all</strong> and <strong>unknown</strong> results are free.
+          </p>
+          <p>
+            Confidence score and role-address flag included with every result.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ How it works ============ -->
+  <section class="ev-section">
+    <div class="shell">
+      <div class="head-hang">
+        <h2>How it works</h2>
+        <p>
+          Three steps from list to usable result — no setup, no proxy pool, no onboarding
+          call.
+        </p>
+      </div>
+
+      <ol class="ev-steps">
+        <li>
+          <p class="ev-step-title">Upload or paste your email list into the actor input.</p>
+          <p>Plain list accepted — no special formatting required.</p>
+        </li>
+        <li>
+          <p class="ev-step-title">
+            Run the actor on Apify.
+          </p>
+          <p>
+            It checks syntax, domain validity, MX records, SMTP handshake, catch-all status,
+            and role-address patterns.
+          </p>
+        </li>
+        <li>
+          <p class="ev-step-title">Receive a downloadable result set.</p>
+          <p>
+            Every address is tagged with a verdict and confidence score. You are only billed
+            for valid, invalid, and disposable addresses.
+          </p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ Closing CTA ============ -->
+  <section class="close">
+    <div class="shell close__grid">
+      <div>
+        <h2>Run your first verification on Apify now</h2>
+        <p>
+          Start with a small list. You’ll see the verdicts, confidence scores, and exact
+          billing before you commit.
+        </p>
+      </div>
+      <div class="close__actions">
+        <a
+          class="btn btn--primary"
+          href="https://apify.com"
+          target="_blank"
+          rel="noopener"
+        >
+          Open the actor
+        </a>
+        <a class="btn btn--secondary" href="#pricing">See pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>
+
+<style is:global>
+  .ev-hero h1 {
+    max-width: 18ch;
+  }
+
+  .ev-section {
+    padding-block: var(--space-3xl);
+  }
+
+  .ev-section.band {
+    background: var(--color-paper-2);
+  }
+
+  .ev-list {
+    margin-block-start: var(--space-2xl);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+    gap: var(--space-xl) var(--space-2xl);
+  }
+
+  .ev-item h3 {
+    font-size: var(--text-xl);
+    margin-block-end: var(--space-sm);
+  }
+
+  .ev-item p {
+    color: var(--color-ink-2);
+    max-width: var(--measure);
+  }
+
+  .ev-pricing {
+    margin-block-start: var(--space-2xl);
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: var(--space-2xl) var(--space-3xl);
+    align-items: start;
+  }
+
+  .ev-price-card {
+    background: var(--color-paper-2);
+    border: var(--rule-hair) solid var(--color-rule);
+    border-radius: var(--radius-card);
+    padding: var(--space-xl);
+  }
+
+  .ev-price-card .offer__price {
+    font-family: var(--font-outlier);
+    font-size: var(--text-xl);
+    font-weight: 500;
+    color: var(--color-accent-deep);
+    letter-spacing: 0.02em;
+    margin-block-end: var(--space-xs);
+  }
+
+  .ev-price-card p:last-child {
+    color: var(--color-muted);
+    font-size: var(--text-sm);
+  }
+
+  .ev-price-rules p {
+    color: var(--color-ink-2);
+    max-width: var(--measure);
+  }
+
+  .ev-price-rules p + p {
+    margin-block-start: var(--space-md);
+  }
+
+  .ev-steps {
+    margin-block-start: var(--space-2xl);
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+    gap: var(--space-xl) var(--space-2xl);
+    counter-reset: ev-step;
+  }
+
+  .ev-steps li {
+    position: relative;
+    counter-increment: ev-step;
+    padding-block-start: var(--space-3xl);
+    border-top: var(--rule-hair) solid var(--color-rule);
+  }
+
+  .ev-steps li::before {
+    content: counter(ev-step);
+    position: absolute;
+    top: 0;
+    inset-inline-start: 0;
+    font-family: var(--font-outlier);
+    font-size: var(--text-xl);
+    font-weight: 500;
+    color: var(--color-accent);
+    line-height: 1;
+    padding-block: var(--space-xs);
+    padding-inline: var(--space-sm);
+    border: var(--rule-hair) solid var(--color-rule);
+    border-radius: var(--radius-card);
+    background: var(--color-paper-2);
+  }
+
+  .ev-step-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--text-md);
+    margin-block-end: var(--space-xs);
+  }
+
+  .ev-steps li p:last-child {
+    color: var(--color-muted);
+    font-size: var(--text-sm);
+  }
+
+  @media (max-width: 60rem) {
+    .ev-pricing {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>

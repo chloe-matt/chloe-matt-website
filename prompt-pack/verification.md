@@ -24,13 +24,27 @@ Verified as part of kanban task t_c6ed3567
 - Result: PASS from the UI path perspective.
 
 ### 4. Buttondown integration
-- Wiring present: hidden iframe targets `https://buttondown.email/api/emails/embed-subscribe/chloematt`.
-- Cross-origin iframe response after real form submission cannot be inspected from this session, so subscribe success/failure and list-ID correctness cannot be confirmed end-to-end here.
-- Extra check: a programmatic POST to the endpoint returns HTTP 403 with body `error code: 1010`, which is Cloudflare's blocked-by-WAF response. This indicates the endpoint is behind active bot protection; it does not prove integration failure for real browser submissions, but it does confirm the endpoint is not accepting unauthenticated script traffic.
-- Result: PARTIAL — needs manual confirmation via a real browser/form submission observed in Network, or a Buttondown dashboard spot-check.
+|- **Slug on page:** source `public/prompt-pack/index.html:304` and the live page both use
+  `https://buttondown.email/api/emails/embed-subscribe/chloematt` (slug `chloematt`, correct spelling). Wiring is correct.
+|- **Live response (2026-08-04):**
+  - `GET` to `…/chloematt` → HTTP 302 (redirect `buttondown.email` → `buttondown.com`), followed to a Buttondown-styled **404 Error** page.
+  - `POST` to the same endpoint → HTTP 403, body `error code: 1010` (Cloudflare WAF blocking unauthenticated programmatic traffic).
+|- **Interpretation:** the endpoint is live and responding (not a DNS/dead-link 404), but the
+  `GET` 404 + `POST` 403 mean programmatic confirmation of list delivery is not possible from this
+  environment. The cross-origin hidden-iframe submit returns no readable feedback, so a real
+  browser submission also gives no visible success/error signal.
+|- **Result: PARTIAL** — slug is correctly wired on the page; end-to-end subscription capture
+  requires manual confirmation via the Buttondown dashboard (subscriber count) or a live browser
+  Network tab inspection. Needs Buttondown account access (held by Asep — not in repo).
 
 ## Overall verdict
 
 Status: PARTIAL PASS
 
-Conclusion: The prompt-pack landing page is live, navigable from the homepage, and the waitlist form submits without visible errors. Final sign-off on Buttondown list delivery still requires manual confirmation.
+Conclusion: The prompt-pack landing page is live (chloematt.eu/prompt-pack/ → HTTP 200),
+navigable from the homepage, and the waitlist form is correctly wired to the `chloematt`
+Buttondown slug with no visible client-side errors. Checks 1–3 PASS. Check 4 (Buttondown
+delivery) is documented but unverified end-to-end: the endpoint responds but GET→404 and
+POST→403 (WAF) prevent programmatic proof, and the cross-origin iframe hides the submit result.
+Final production sign-off on the waitlist requires Buttondown dashboard confirmation by the
+account holder.

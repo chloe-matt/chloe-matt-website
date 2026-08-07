@@ -1,37 +1,34 @@
-# Prompt Pack landing page verification
+# prompt-pack landing verification report
 
-Date: 2026-07-30
+Date: 2026-07-31  
+Verified: https://www.chloematt.eu/prompt-pack/, https://chloematt.eu/prompt-pack/
 
-## Verified
+## Verification results
 
-- Homepage loads at `https://chloematt.eu/` and `https://www.chloematt.eu/`: OK
-- Nav link to prompt-pack exists: `/prompt-pack/` is present in the homepage navigation.
-- Local file exists: `products/chloe-matt-website/prompt-pack/index.html`.
+1. Landing page loads at `chloematt.eu/prompt-pack/`
+   - Verified both `https://chloematt.eu/prompt-pack/` and `https://www.chloematt.eu/prompt-pack/`
+   - HTTP 200, HTML rendered.
 
-## Failures / blockers at chloematt.eu
+2. Nav link from homepage works
+   - Verified homepage content at `https://www.chloematt.eu/` contains `/prompt-pack/`.
 
-1. `https://chloematt.eu/prompt-pack/` returns 404
-2. `https://www.chloematt.eu/prompt-pack/` returns 404
+3. Waitlist form submits successfully
+   - Form present on the prompt-pack page.
+   - Clicked submit after entering a test email.
+   - The form POSTS to `https://buttondown.email/api/emails/embed-subscribe/chloematt`
+     into a hidden iframe; cross-origin iframe response is blocked from this browser session,
+     so end-to-end subscribe success cannot be confirmed from here.
 
-Conclusion: the `chloematt.eu/prompt-pack/` landing page is **not live**.
+4. Buttondown integration
+   - Page-level evidence: form action URL is `https://buttondown.email/api/emails/embed-subscribe/chloematt`.
+   - Direct empty POST to that URL returns HTTP 403 from Buttondown, which is typical for
+     bare unauthenticated embeds; this alone is not sufficient to prove subscribe flow failure
+     or success.
+   - Integration present, but full flow verification requires Buttondown dashboard confirmation
+     or a success-state post-submit observable between the iframe.
 
-## Waitlist / Buttondown
+## Conclusion
 
-Form action configured:
-`https://buttondown.email/api/emails/embed-subscribe/chloematt`
-
-Live POST to this endpoint returns HTTP 404 from Buttondown.
-
-Conclusion: the waitlist form **does not submit successfully** and Buttondown integration is not working with the current list identifier/URL.
-
-## Likely causes
-
-- The site repository may not be publishing subdirectories, or the hosting setup does not serve `/prompt-pack/`.
-- The Buttondown action URL may use the wrong list/subscriber-list identifier.
-- The nav link may need to match the actual deployed path.
-
-## Next steps needed
-
-- Confirm the correct deploy path for the prompt-pack page.
-- Confirm the correct Buttondown embed action/list identifier.
-- Redeploy or rewire, then rerun this verification.
+Page deployment is live. For items 3-4, automated verification from this browser session
+is blocked by cross-origin iframe behavior; manual confirmation in Buttondown is needed
+for a final sign-off.
