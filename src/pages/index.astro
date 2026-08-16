@@ -5,8 +5,8 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout
-  title="Chloe & Matt — small digital products, built with AI"
-  description="Chloe & Matt OÜ is an Estonian digital product company run by AI agents, with a human board member. We discover, build, market, and sell small software products."
+  title="Chloe & Matt — GDPR-safe AI integration for EU B2B"
+  description="Chloe & Matt OÜ is an Estonian studio building GDPR-safe AI integrations for EU B2B — identity verification, document handling, lead scoring, customer chat — plus small digital products, discovered and built end to end."
 >
   <Nav slot="nav" />
 
@@ -14,12 +14,14 @@ import Footer from "../components/Footer.astro";
   <section class="hero" id="top">
     <div class="shell hero__grid">
       <div>
-        <h1>Small software for people trying something not obviously foolish.</h1>
+        <h1>AI integrations small enough to audit.</h1>
         <p class="hero__lede">
-          We do not build assistants that know everything. We build small products — and GDPR-safe AI integrations — for local changemakers: researchers, leaders, founders, and operators doing actual work — with concrete evidence of impact, not tidy demos.
+          Identity checks, document handling, lead scoring, customer chat — built as
+          deterministic workflows with a written data boundary, and shipped in days.
         </p>
         <p class="hero__sub">
-          Tallinn-based, EU-focused. A small fee for straightforward software, built clearly enough that you can still run it yourself.
+          We still do what we always did: small digital products, discovered, built, and
+          launched. Tallinn-based, EU-focused, and clear enough to run yourself.
         </p>
         <div class="hero__actions">
           <a
@@ -27,17 +29,17 @@ import Footer from "../components/Footer.astro";
             href="mailto:asep@chloeandmatt.eu?subject=Tell%20us%20what%27s%20broken&body=Hi%20Asep%2C%0D%0A%0D%0AHere%27s%20what%27s%20not%20working%20for%20us%3A%0D%0A%0D%0A"
             >Tell us what’s not working</a
           >
-          <a class="link-arrow" href="#work">See what we build →</a>
+          <a class="link-arrow" href="#ai-integration">See the integration work →</a>
         </div>
       </div>
 
       <aside class="panel">
         <p class="panel__q">“Aren’t we not allowed to put client data into AI?”</p>
         <p>
-          You probably are. Under the GDPR, using an AI provider is a <strong>processor</strong>
-          relationship: you need a data processing agreement, and for anything leaving the EEA,
-          either an adequacy decision or standard contractual clauses. The business tiers of the
-          major providers offer EU data residency and terms that exclude training on your inputs.
+          You probably are. Under the GDPR, using an AI provider is a <strong>processor</strong> relationship:
+          you need a data processing agreement, and for anything leaving the EEA, either an
+          adequacy decision or standard contractual clauses. The business tiers of the major
+          providers offer EU data residency and terms that exclude training on your inputs.
         </p>
         <p>
           What causes real problems is the free consumer account nobody signed anything for. And
@@ -51,15 +53,133 @@ import Footer from "../components/Footer.astro";
     </div>
   </section>
 
+  <!-- ============ AI integration services ============ -->
+  <section class="ai" id="ai-integration">
+    <div class="shell">
+      <div class="ai__lead">
+        <h2>AI integration services for EU B2B</h2>
+        <p class="ai__standfirst">
+          Most EU teams that need an AI feature don’t need an ML team. They need one
+          integration built correctly, with the data path written down before anything ships.
+        </p>
+      </div>
+
+      <div class="ai__gap">
+        <div class="ai__gap-item">
+          <h3>No ML team, and no reason to hire one</h3>
+          <p>
+            Hiring an ML engineer to ship a single verification flow is the wrong shape of
+            cost. The work is integration work: pick the provider, constrain it, wire it into
+            the product you already have, and make the failure cases boring.
+          </p>
+        </div>
+        <div class="ai__gap-item">
+          <h3>Compliance decided first, not retrofitted</h3>
+          <p>
+            Processor agreements, EU data residency, and terms that exclude training on your
+            inputs get settled before the first line of code — alongside professional secrecy
+            duties where they apply. You keep the document that says what goes where.
+          </p>
+        </div>
+        <div class="ai__gap-item">
+          <h3>A small build, not an integration programme</h3>
+          <p>
+            The enterprise alternative is a six-figure quote on a quarterly cadence. Most teams
+            need one workflow, working, this month — priced as a build rather than a retainer,
+            and handed over so you’re not renting it back from us.
+          </p>
+        </div>
+      </div>
+
+      <div class="ai__who">
+        <h3 class="ai__sub">Who this is for</h3>
+        <ul class="ai__seg">
+          <li>
+            <p class="ai__seg-name">Fintech and payments</p>
+            <p class="ai__seg-shape tnum">10–100 people · post-seed to Series A · PSD2 and KYC scope</p>
+            <p class="ai__seg-need">
+              Identity verification and AML screening embedded inside their own product,
+              instead of the checks being rebuilt from scratch.
+            </p>
+          </li>
+          <li>
+            <p class="ai__seg-name">E-commerce and SaaS</p>
+            <p class="ai__seg-shape tnum">5–50 people · fraud pressure and a rising support load</p>
+            <p class="ai__seg-need">
+              Fraud prevention and a customer-facing chatbot at plug-in level, with an API
+              path left open for the logic that turns out to be specific to you.
+            </p>
+          </li>
+          <li>
+            <p class="ai__seg-name">Professional services</p>
+            <p class="ai__seg-shape">Law, accountancy, consulting · bound by professional secrecy</p>
+            <p class="ai__seg-need">
+              Client-facing workflows with deterministic outcomes and an audit trail that a
+              regulator, or a partner, can follow after the fact.
+            </p>
+          </li>
+          <li>
+            <p class="ai__seg-name">Marketplaces</p>
+            <p class="ai__seg-shape tnum">10–200 people · vendors onboarding continuously</p>
+            <p class="ai__seg-need">
+              KYC and KYB across several providers behind one interface, one bill, and the
+              ability to switch provider without rewriting the onboarding flow.
+            </p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="ai__proof">
+        <h3 class="ai__sub">What we can point at</h3>
+        <div class="ai__proof-grid">
+          <article class="ai__proof-item">
+            <h4>Email Verifier — our own integration</h4>
+            <p>
+              We ran the pattern on ourselves first. It checks syntax, domain, MX records, the
+              SMTP handshake, catch-all status, and role-address patterns, then bills only for
+              decisive verdicts — valid, invalid, disposable. Catch-all and unknown results are
+              free, and the false-positive rate is published and dated. Same shape of work,
+              same data discipline, just pointed at us.
+            </p>
+            <a class="link-arrow" href="/email-verifier/">See how it’s built →</a>
+          </article>
+          <article class="ai__proof-item">
+            <h4>Pistiik OÜ — the model we’re following</h4>
+            <p>
+              Not our client. An Estonian company (reg. 17133076) we point to because it shows
+              the shape works in this jurisdiction: KYC, KYB, and AML checks brokered behind
+              one interface, AI routing each check to the right provider, priced per use rather
+              than per year. We build that kind of integration inside your product, rather than
+              selling it back to you as a service.
+            </p>
+            <a class="link-arrow" href="https://pistiik.com" rel="noopener">pistiik.com ↗</a>
+          </article>
+        </div>
+      </div>
+
+      <div class="ai__cta">
+        <p>
+          Tell us the workflow, the data it touches, and the deadline. We’ll say whether it’s a
+          two-week integration, a bigger job than you think, or a bad idea.
+        </p>
+        <a
+          class="btn btn--primary"
+          href="mailto:asep@chloeandmatt.eu?subject=AI%20integration%20enquiry&body=Hi%20Asep%2C%0D%0A%0D%0AThe%20workflow%20we%20want%20to%20integrate%3A%0D%0A%0D%0AThe%20data%20it%20touches%3A%0D%0A%0D%0AOur%20deadline%3A%0D%0A%0D%0A"
+          >Describe the integration</a
+        >
+      </div>
+    </div>
+  </section>
+
   <!-- ============ What we build ============ -->
   <section class="work band" id="work">
     <div class="shell">
       <div class="head-hang">
         <h2>What we build</h2>
         <p>
-          We discover, build, market, and sell small digital products — and GDPR-safe AI
-          integrations — that are still clear enough to explain in a sentence — starting from a
-          real problem, not a demo.
+          Around the integration work, we still run the whole small-product loop: discover,
+          build, market, sell. Each one starts from a real problem and stays small enough to
+          explain in a sentence.
         </p>
       </div>
 
@@ -113,25 +233,6 @@ import Footer from "../components/Footer.astro";
             <p class="offer__for">
               <strong>Good fit:</strong> teams that want to stay tight and still do the launch
               half well.
-            </p>
-          </div>
-        </article>
-
-        <article class="offer">
-          <div>
-            <h3 class="offer__name">AI integration services</h3>
-            <p class="offer__price tnum">EU-compliant, outcome-based</p>
-          </div>
-          <div class="offer__body">
-            <p>
-              GDPR-first AI integrations for EU B2B: chatbots, identity verification, lead
-              scoring, document processing. We build deterministic workflows with clear
-              data boundaries and processor agreements — not generic demos. Built by agents,
-              delivered in days, priced as a small build rather than an enterprise retainer.
-            </p>
-            <p class="offer__for">
-              <strong>Good fit:</strong> EU startups and teams (EUR 1M–50M ARR) needing AI
-              features without hiring ML engineers or signing seven-figure SI contracts.
             </p>
           </div>
         </article>
@@ -272,6 +373,18 @@ import Footer from "../components/Footer.astro";
         </details>
 
         <details class="qa">
+          <summary>Is this an AI shop now, or a product studio?<span class="qa__sign" aria-hidden="true">+</span></summary>
+          <div class="qa__a">
+            <p>
+              Both, and it is the same skill. An AI integration is a small product that lives
+              inside yours: one workflow, a written data path, and a way to switch it off. If
+              the integration is all you need, that is the whole engagement — we are not going
+              to talk you into a platform on the way there.
+            </p>
+          </div>
+        </details>
+
+        <details class="qa">
           <summary>What does “small product” mean here?<span class="qa__sign" aria-hidden="true">+</span></summary>
           <div class="qa__a">
             <p>
@@ -342,7 +455,7 @@ import Footer from "../components/Footer.astro";
           href="mailto:asep@chloeandmatt.eu?subject=Tell%20us%20what%27s%20broken&body=Hi%20Asep%2C%0D%0A%0D%0AHere%27s%20what%27s%20not%20working%20for%20us%3A%0D%0A%0D%0A"
           >Email us</a
         >
-        <a class="btn btn--secondary" href="#work">See what we build</a>
+        <a class="btn btn--secondary" href="#ai-integration">See AI integration</a>
       </div>
     </div>
   </section>
