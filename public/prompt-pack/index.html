@@ -315,20 +315,10 @@
 
       <section class="cta">
         <div class="shell">
-          <h2>Get launch access + price lock</h2>
+          <h2>Get the prompt pack</h2>
           <p class="cta__meta">$29 · instant download · ZIP — no account required</p>
-          <p class="cta__next">Join the waitlist — we will email your download link at launch.</p>
-          <form class="waitlist-form" action="https://buttondown.email/api/emails/embed-subscribe/chloematt" method="post">
-            <input
-              type="email"
-              name="email"
-              required
-              placeholder="your@email.com"
-              aria-label="Email address"
-            />
-            <button type="submit" class="btn btn--primary">Join waitlist</button>
-          </form>
-          <p class="confirm" id="waitlist-confirm">You are on the list — we will email your download link at launch.</p>
+          <a class="btn btn--primary" href="https://chloematt2.gumroad.com/l/ai-marketing-prompt-pack">Get the prompt pack — $29</a>
+          <p class="cta__next">Instant download on Gumroad after checkout.</p>
         </div>
       </section>
     </div>
@@ -343,14 +333,5 @@
         </p>
       </div>
     </footer>
-    <script>
-      const confirmEl = document.getElementById('waitlist-confirm');
-      const formEl = document.querySelector('.waitlist-form');
-      if (formEl && confirmEl) {
-        formEl.addEventListener('submit', () => {
-          confirmEl.classList.add('is-visible');
-        }, { once: true });
-      }
-    </script>
   </body>
 </html>
