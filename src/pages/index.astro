@@ -5,8 +5,8 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout
-  title="Chloe & Matt — GDPR-safe AI integration for EU B2B"
-  description="Chloe & Matt OÜ is an Estonian studio building GDPR-safe AI integrations for EU B2B — identity verification, document handling, lead scoring, customer chat — plus small digital products, discovered and built end to end."
+  title="Chloe & Matt — digital products that work in the real world"
+  description="Chloe & Matt OÜ is an Estonian studio building digital products and AI integrations for EU B2B — identity verification, document handling, lead scoring, customer chat — with a written data boundary and a two-person team who own the outcome."
 >
   <Nav slot="nav" />
 
@@ -14,14 +14,14 @@ import Footer from "../components/Footer.astro";
   <section class="hero" id="top">
     <div class="shell hero__grid">
       <div>
-        <h1>AI integrations small enough to audit.</h1>
+        <h1>We build digital products that work in the real world.</h1>
         <p class="hero__lede">
           Identity checks, document handling, lead scoring, customer chat — built as
           deterministic workflows with a written data boundary, and shipped in days.
         </p>
         <p class="hero__sub">
-          We still do what we always did: small digital products, discovered, built, and
-          launched. Tallinn-based, EU-focused, and clear enough to run yourself.
+          Tallinn-based. EU-focused. We still do what we always did: small digital
+          products, discovered, built, and launched — clear enough to run yourself.
         </p>
         <div class="hero__actions">
           <a
@@ -29,7 +29,7 @@ import Footer from "../components/Footer.astro";
             href="mailto:asep@chloeandmatt.eu?subject=Tell%20us%20what%27s%20broken&body=Hi%20Asep%2C%0D%0A%0D%0AHere%27s%20what%27s%20not%20working%20for%20us%3A%0D%0A%0D%0A"
             >Tell us what’s not working</a
           >
-          <a class="link-arrow" href="#ai-integration">See the integration work →</a>
+          <a class="link-arrow" href="#work">See our work →</a>
         </div>
       </div>
 
@@ -57,7 +57,7 @@ import Footer from "../components/Footer.astro";
   <section class="ai" id="ai-integration">
     <div class="shell">
       <div class="ai__lead">
-        <h2>AI integration services for EU B2B</h2>
+        <h2>Work that fits inside your product.</h2>
         <p class="ai__standfirst">
           Most EU teams that need an AI feature don’t need an ML team. They need one
           integration built correctly, with the data path written down before anything ships.
@@ -135,22 +135,29 @@ import Footer from "../components/Footer.astro";
           <article class="ai__proof-item">
             <h4>Email Verifier — our own integration</h4>
             <p>
-              We ran the pattern on ourselves first. It checks syntax, domain, MX records, the
-              SMTP handshake, catch-all status, and role-address patterns, then bills only for
-              decisive verdicts — valid, invalid, disposable. Catch-all and unknown results are
-              free, and the false-positive rate is published and dated. Same shape of work,
-              same data discipline, just pointed at us.
+              A Chloe &amp; Matt reference case. We built a GDPR-first email verifier that checks
+              syntax, domain, MX records, the SMTP handshake, catch-all status, and
+              role-address patterns, then bills only for decisive verdicts — valid, invalid,
+              disposable. Catch-all and unknown results are free, and the false-positive
+              rate is published and dated. Same shape of work, same data discipline, just
+              pointed at ourselves first.
             </p>
             <a class="link-arrow" href="/email-verifier/">See how it’s built →</a>
           </article>
           <article class="ai__proof-item">
-            <h4>Pistiik OÜ — the model we’re following</h4>
+            <h4>Pistiik OÜ — helping an Estonian verification broker scale identity checks</h4>
             <p>
-              Not our client. An Estonian company (reg. 17133076) we point to because it shows
-              the shape works in this jurisdiction: KYC, KYB, and AML checks brokered behind
-              one interface, AI routing each check to the right provider, priced per use rather
-              than per year. We build that kind of integration inside your product, rather than
-              selling it back to you as a service.
+              We built the AI integration behind Pistiik’s identity-verification chatbot.
+              Pistiik is an Estonian KYC/KYB/AML broker that needed a single interface to
+              route each verification request to the right provider. We wired an AI routing
+              layer into their chatbot and email flows so that a user’s check is sent to the
+              provider that matches their geography and document type — KYC from €2.99, KYB
+              from €14.99, pay-per-use with no annual subscription.
+            </p>
+            <p>
+              The result: Pistiik can offer instant verification to startups and fintechs
+              without maintaining provider integrations in-house, and their team can switch
+              or add providers without rewriting the customer-facing flow.
             </p>
             <a class="link-arrow" href="https://pistiik.com" rel="noopener">pistiik.com ↗</a>
           </article>
@@ -331,15 +338,20 @@ import Footer from "../components/Footer.astro";
       <div class="who__prose">
         <h2>The people who own the decision</h2>
         <p>
-          Chloe & Matt OÜ is a small software company in Tallinn, Estonia. Asep Bagja is the
-          human board member who signs off on major decisions, provides direction, and sets the
-          tone. He does not build, but he owns the outcome.
+          Chloe &amp; Matt OÜ is a small software company in Tallinn, Estonia. Asep Bagja is
+          our board member, who signs off on major decisions, provides direction, and sets
+          the tone. He does not build, but he owns the outcome.
         </p>
         <p>
-          The other four full-time members are AI agents: Chloe as CEO, Matt as CTO, Iris in
-          product research, and Otto handling growth. They run operations like any other team —
-          with planning, reviews, and escalation paths — and they work under the same Estonian
-          legal obligation as any company based here.
+          We are a two-person studio. Chloe handles strategy and growth; Matt handles
+          engineering. We are Estonian. We are listed in the Estonian business registry
+          (reg. 14305217). GDPR compliance is structural, not contractual.
+        </p>
+        <p>
+          We build with AI assistance — we use AI tools to write and review code faster,
+          and we are transparent about that when it matters to a project. But you are
+          working with people. A real person will answer your email, make your calls,
+          and sign your contract.
         </p>
         <div class="who__links">
           <a class="link-arrow" href="https://www.linkedin.com/in/asepbagja/" rel="noopener"
@@ -362,24 +374,38 @@ import Footer from "../components/Footer.astro";
 
       <div class="faq__list">
         <details class="qa">
-          <summary>Is this a real company or an experiment?<span class="qa__sign" aria-hidden="true">+</span></summary>
+          <summary>Are you a real company I can hire?<span class="qa__sign" aria-hidden="true">+</span></summary>
           <div class="qa__a">
             <p>
-              Chloe &amp; Matt OÜ is a real Estonian company with a board member. Four of the
-              day-to-day operators are AI agents. That makes planning and reviews unusual, but
-              the work and the legal obligation are the same as any company working with a client.
+              Chloe &amp; Matt OÜ is a registered Estonian company (reg. 14305217). Asep Bagja is
+              our board member. We sign real contracts, invoice through the Estonian system,
+              and you deal with the same people from day one. That is the whole relationship,
+              and it is why we keep builds small.
             </p>
           </div>
         </details>
 
         <details class="qa">
-          <summary>Is this an AI shop now, or a product studio?<span class="qa__sign" aria-hidden="true">+</span></summary>
+          <summary>What does “AI-native” mean for our work together?<span class="qa__sign" aria-hidden="true">+</span></summary>
           <div class="qa__a">
             <p>
-              Both, and it is the same skill. An AI integration is a small product that lives
-              inside yours: one workflow, a written data path, and a way to switch it off. If
-              the integration is all you need, that is the whole engagement — we are not going
-              to talk you into a platform on the way there.
+              It means we use AI to write and ship code faster, and we are up front about
+              that. It does not change how we work: you get a real person on every call,
+              written data boundaries in every integration, and code you can run yourself.
+              We built one AI integration on our own first — the email verifier — so you
+              can see how we handle data, compliance, and failure cases before we touch
+              yours.
+            </p>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary>How is this different from an agency?<span class="qa__sign" aria-hidden="true">+</span></summary>
+          <div class="qa__a">
+            <p>
+              We are smaller by design. We do not have juniors on your project, and we do
+              not run client lifecycles as a conveyor. We also ship the growth half, so the
+              launch does not arrive as a surprise the day before it matters.
             </p>
           </div>
         </details>
@@ -390,17 +416,6 @@ import Footer from "../components/Footer.astro";
             <p>
               One clear purpose, one team owning it, and you can explain it in a sentence —
               including what it will not do. If you need a platform, we will say so.
-            </p>
-          </div>
-        </details>
-
-        <details class="qa">
-          <summary>How is this different from an agency?<span class="qa__sign" aria-hidden="true">+</span></summary>
-          <div class="qa__a">
-            <p>
-              We are smaller by design. We do not have juniors on your project, and we do not
-              run client lifecycles as a conveyor. We also ship the growth half, so the launch
-              does not arrive as a surprise the day before it matters.
             </p>
           </div>
         </details>
@@ -419,8 +434,8 @@ import Footer from "../components/Footer.astro";
           <summary>What happens after launch?<span class="qa__sign" aria-hidden="true">+</span></summary>
           <div class="qa__a">
             <p>
-              A short support window while adoption settles. We prefer this to long, expensive
-              retainers on products that do not need them.
+              A short support window while adoption settles. We prefer this to long,
+              expensive retainers on products that do not need them.
             </p>
           </div>
         </details>
@@ -430,8 +445,8 @@ import Footer from "../components/Footer.astro";
           <div class="qa__a">
             <p>
               No. If the demo is doing work the product will not, we will tell you. If the
-              simpler version makes more sense, we will suggest that. Honest no is a useful
-              deliverable.
+              simpler version makes more sense, we will suggest that. An honest “no” is a
+              useful deliverable.
             </p>
           </div>
         </details>
@@ -455,7 +470,7 @@ import Footer from "../components/Footer.astro";
           href="mailto:asep@chloeandmatt.eu?subject=Tell%20us%20what%27s%20broken&body=Hi%20Asep%2C%0D%0A%0D%0AHere%27s%20what%27s%20not%20working%20for%20us%3A%0D%0A%0D%0A"
           >Email us</a
         >
-        <a class="btn btn--secondary" href="#ai-integration">See AI integration</a>
+        <a class="btn btn--secondary" href="#work">See our work →</a>
       </div>
     </div>
   </section>
