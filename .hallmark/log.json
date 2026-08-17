@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-08-17",
+    "scope": "page",
+    "macrostructure": "Split Studio",
+    "genre": "modern-minimal",
+    "theme": "custom",
+    "theme_axes": "light / geometric-sans / warm",
+    "vibe": "honest, warm, plain-spoken, EU",
+    "nav": "N5 Floating pill",
+    "footer": "Ft5 Statement",
+    "enrichment": "none",
+    "brief": "Chloe & Matt homepage · additive pivot to lead with GDPR-first AI integration services for EU B2B; new .ai band section (problem / segments / proof) placed second, AI offer card removed from the What-we-build grid. Diversification deliberately inverted — same system as email-verifier.astro; variety carried by the section's inverted --color-band surface and three-column broadsheet rule set, the only ones on the site."
+  },
+  {
     "date": "2026-07-27",
     "scope": "page",
     "macrostructure": "Split Studio",

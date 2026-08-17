@@ -28,7 +28,7 @@ const { title, description } = Astro.props;
 
     <style is:global>
       /* Hallmark · genre: modern-minimal · macrostructure: Split Studio
-       * H2 split-diptych knobs: ratio=7/5, right=straight-answer panel, divider=negative space
+       * H2 split-diptych knobs: ratio=6/5, right=straight-answer panel, divider=negative space
        * nav: N5 Floating pill (width=content-sized, backdrop=blur+saturate, anchor=top-centred)
        * footer: Ft5 Statement (sentence=38ch, wordmark=under sentence, rule=hairline)
        * theme: custom · vibe: "honest, warm, plain-spoken, EU"
@@ -36,11 +36,19 @@ const { title, description } = Astro.props;
        * display: Bricolage Grotesque · body: Geist · outlier: Geist Mono
        * axes: light / geometric-sans / warm · enrichment: none · studied: no
        * context: user-provided (audience + tone + hosting stance), angle inferred
-       * pre-emit critique: P5 H5 E4 S5 R4 V4
+       *
+       * 2026-08-17 · redesign pass — homepage led with AI integration services for EU B2B.
+       * System-consistent by intent: theme, nav, footer and macrostructure are held across
+       * both pages, so diversification is inverted (share the system, don't rotate it).
+       * Variety is carried by the new .ai section instead: the page's only inverted
+       * surface (--color-band), and its only three-column broadsheet rule set.
+       * pre-emit critique: P5 H5 E5 S5 R4 V4
        *
        * contrast: pass (40–41) · nav: N5 · footer: Ft5 · slop: pass (42–45)
        * honest: pass (46) · chrome: pass (47) · tokens: pass (48)
        * responsive: pass (49) · icons: pass (30) · mobile: pass (34, 49, 50–57)
+       * band pairs verified (WCAG 2.1): band-ink/band 14.89 · band-muted/band 5.71
+       *   accent/band 4.58 (links + focus ring) · accent-deep/band 2.76 — never used on band.
        * gate 26: no disabled state — every control is an <a>; no forms on page.
        * gate 39: N/A — no inputs.
        */
@@ -132,8 +140,13 @@ const { title, description } = Astro.props;
       .nav {
         position: fixed;
         top: var(--space-md);
-        left: 50%;
-        transform: translateX(-50%);
+        /* Centred with auto margins, not left:50% + translate. A shrink-to-fit
+           fixed box anchored at left:50% is only offered half the viewport as
+           available width, which squeezed .nav__links and clipped its last link
+           at every desktop width below ~1860px. */
+        inset-inline: 0;
+        margin-inline: auto;
+        width: fit-content;
         z-index: var(--z-sticky);
         display: flex;
         align-items: center;
@@ -186,7 +199,7 @@ const { title, description } = Astro.props;
       }
       .nav__link:hover { color: var(--color-ink); border-bottom-color: var(--color-accent); }
 
-      @media (max-width: 52rem) {
+      @media (max-width: 60rem) {
         .nav__links {
           position: absolute;
           top: calc(100% + var(--space-sm));
@@ -279,7 +292,7 @@ const { title, description } = Astro.props;
       .nav__menu-btn[aria-expanded="true"] .nav__menu-btn-line:nth-child(2) { opacity: 0; }
       .nav__menu-btn[aria-expanded="true"] .nav__menu-btn-line:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
-      @media (max-width: 52rem) {
+      @media (max-width: 60rem) {
         .nav__menu-btn { display: flex; }
         .nav .btn--sm { display: none; }
       }
@@ -322,8 +335,8 @@ const { title, description } = Astro.props;
       }
       .hero__grid {
         display: grid;
-        grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
-        gap: var(--space-3xl);
+        grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+        gap: var(--space-2xl);
         align-items: start;
       }
       .hero h1 {
@@ -425,6 +438,176 @@ const { title, description } = Astro.props;
       @media (max-width: 60rem) {
         .offer { grid-template-columns: minmax(0, 1fr); gap: var(--space-sm); }
         .offer--audit { padding: var(--space-lg); }
+      }
+
+      /* ============ AI integration · the flagship offer ============
+         The page's only inverted surface. Hierarchy comes from the surface flip,
+         not from bigger type — everything else on the page stays light. */
+
+      .ai {
+        background: var(--color-band);
+        color: var(--color-band-ink);
+        padding-block: var(--space-3xl) var(--space-4xl);
+      }
+      .ai h2,
+      .ai h3,
+      .ai h4 { color: var(--color-band-ink); }
+
+      .ai .link-arrow {
+        color: var(--color-accent);
+        border-bottom-color: var(--color-accent);
+      }
+      .ai .link-arrow:hover { border-bottom-color: var(--color-band-ink); }
+      /* --color-focus is 2.52 on the band — under 3:1. Accent clears at 4.58. */
+      .ai :focus-visible { outline-color: var(--color-accent); }
+
+      .ai__lead h2 {
+        font-size: var(--text-3xl);
+        max-width: 30ch;
+        text-wrap: balance;
+        margin-block-end: var(--space-md);
+      }
+      .ai__standfirst {
+        font-size: var(--text-lg);
+        line-height: 1.45;
+        color: var(--color-band-muted);
+        max-width: 52ch;
+      }
+
+      /* ---- The gap · two broadsheet columns, vertical hairline, no cards ---- */
+
+      .ai__gap {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin-block-start: var(--space-2xl);
+        border-top: var(--rule-hair) solid var(--color-band-rule);
+      }
+      .ai__gap-item {
+        padding-block-start: var(--space-xl);
+        padding-inline-end: var(--space-xl);
+      }
+      .ai__gap-item:nth-child(even) {
+        padding-inline: var(--space-xl) 0;
+        border-inline-start: var(--rule-hair) solid var(--color-band-rule);
+      }
+      /* Second row onwards the rule runs horizontally instead of vertically. */
+      .ai__gap-item:nth-child(n + 3) {
+        margin-block-start: var(--space-xl);
+        border-top: var(--rule-hair) solid var(--color-band-rule);
+      }
+      /* An odd item count widows the last row — let it run the full width rather
+         than sit half-empty, and hold its copy to the sibling columns' measure. */
+      .ai__gap-item:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        padding-inline-end: 0;
+      }
+      .ai__gap-item:last-child:nth-child(odd) p { max-width: 48ch; }
+      .ai__gap-item h3 {
+        font-size: var(--text-md);
+        margin-block-end: var(--space-xs);
+      }
+      .ai__gap-item p {
+        color: var(--color-band-muted);
+        font-size: var(--text-base);
+      }
+
+      /* ---- Who this is for ---- */
+
+      .ai__sub {
+        font-size: var(--text-xl);
+        margin-block-end: var(--space-lg);
+      }
+      .ai__who { margin-block-start: var(--space-3xl); }
+
+      .ai__seg {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        border-top: var(--rule-hair) solid var(--color-band-rule);
+      }
+      .ai__seg li {
+        display: grid;
+        grid-template-columns: minmax(0, 3fr) minmax(0, 4fr) minmax(0, 7fr);
+        gap: var(--space-sm) var(--space-xl);
+        padding-block: var(--space-lg);
+        border-bottom: var(--rule-hair) solid var(--color-band-rule);
+      }
+      .ai__seg-name {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: var(--text-md);
+        letter-spacing: -0.02em;
+      }
+      .ai__seg-shape {
+        color: var(--color-band-muted);
+        font-size: var(--text-sm);
+      }
+      .ai__seg-need { font-size: var(--text-base); }
+
+      /* ---- Proof · deliberately unequal, ours gets the wider track ---- */
+
+      .ai__proof { margin-block-start: var(--space-3xl); }
+      .ai__proof-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+        gap: var(--space-2xl);
+        align-items: start;
+      }
+      .ai__proof-item h4 {
+        font-size: var(--text-lg);
+        margin-block-end: var(--space-sm);
+      }
+      .ai__proof-item p {
+        color: var(--color-band-muted);
+        font-size: var(--text-base);
+        max-width: var(--measure);
+      }
+      .ai__proof-item .link-arrow { margin-block-start: var(--space-md); }
+
+      /* ---- Section CTA ---- */
+
+      .ai__cta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-lg) var(--space-xl);
+        margin-block-start: var(--space-3xl);
+        padding-block-start: var(--space-xl);
+        border-top: var(--rule-hair) solid var(--color-band-rule);
+      }
+      .ai__cta p {
+        color: var(--color-band-muted);
+        max-width: 46ch;
+      }
+
+      @media (max-width: 60rem) {
+        .ai { padding-block: var(--space-2xl) var(--space-3xl); }
+        .ai__gap { grid-template-columns: minmax(0, 1fr); }
+        .ai__gap-item,
+        .ai__gap-item:nth-child(even) {
+          padding-inline: 0;
+          padding-block-end: var(--space-lg);
+        }
+        .ai__gap-item:last-child { padding-block-end: 0; }
+        .ai__gap-item:last-child:nth-child(odd) p { max-width: none; }
+        .ai__gap-item + .ai__gap-item {
+          margin-block-start: 0;
+          padding-inline-start: 0;
+          border-inline-start: none;
+          border-top: var(--rule-hair) solid var(--color-band-rule);
+        }
+        .ai__who,
+        .ai__proof,
+        .ai__cta { margin-block-start: var(--space-2xl); }
+        .ai__seg li {
+          grid-template-columns: minmax(0, 1fr);
+          gap: var(--space-xs);
+        }
+        .ai__proof-grid {
+          grid-template-columns: minmax(0, 1fr);
+          gap: var(--space-xl);
+        }
       }
 
       /* ============ Worked example — diptych flipped ============ */
