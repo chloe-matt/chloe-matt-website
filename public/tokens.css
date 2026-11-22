@@ -1,39 +1,39 @@
 /* Hallmark · tokens · Chloe & Matt
- * theme: custom · vibe: "honest, warm, plain-spoken, EU"
+ * theme: custom · vibe: "honest, plain-spoken, EU"
  * anchor: images/c-m-logo.png → #EF500B → oklch(64.5% 0.206 38.4)
- * axes: light / geometric-sans / warm
+ * axes: light / grotesk / neutral (plain white paper, logo orange as the only hue)
  *
  * Contrast verified (WCAG 2.1, sRGB):
- *   ink/paper 15.94  ·  ink-2/paper 8.31  ·  muted/paper 5.00
- *   accent-deep/paper 5.38  ·  ink/accent 4.90  ·  focus/paper 5.91
- *   paper/band 14.91  ·  band-muted/band 5.70
- * NOTE: paper-on-accent is 3.25 — FAILS. Never put light text on the accent.
+ *   ink/paper 19.12  ·  ink-2/paper 10.43  ·  muted/paper 6.00  ·  muted/paper-2 5.55
+ *   accent-deep/paper 5.98  ·  ink/accent 5.31  ·  focus/paper 6.56
+ *   band-ink/band 17.43  ·  band-muted/band 6.91
+ * NOTE: paper-on-accent is 3.60 — FAILS. Never put light text on the accent.
  *       The primary button is accent fill + ink text.
  */
 
 :root {
   /* ---- Surfaces ---- */
-  --color-paper:       oklch(96.5% 0.008 60);
-  --color-paper-2:     oklch(93.5% 0.011 55);
-  --color-paper-3:     oklch(90.0% 0.013 50);
-  --color-band:        oklch(24.0% 0.014 45);
+  --color-paper:       oklch(100% 0 0);
+  --color-paper-2:     oklch(97.3% 0.002 260);
+  --color-paper-3:     oklch(94.0% 0.003 260);
+  --color-band:        oklch(19.0% 0.006 260);
 
   /* ---- Text ---- */
-  --color-ink:         oklch(21.0% 0.013 45);
-  --color-ink-2:       oklch(40.0% 0.012 45);
-  --color-muted:       oklch(52.0% 0.010 45);
-  --color-band-ink:    oklch(96.5% 0.008 60);
-  --color-band-muted:  oklch(68.0% 0.010 45);
+  --color-ink:         oklch(17.0% 0.006 260);
+  --color-ink-2:       oklch(37.0% 0.008 260);
+  --color-muted:       oklch(50.0% 0.008 260);
+  --color-band-ink:    oklch(98.0% 0 0);
+  --color-band-muted:  oklch(70.0% 0.006 260);
 
   /* ---- Lines ---- */
-  --color-rule:        oklch(86.0% 0.012 50);
-  --color-rule-2:      oklch(91.5% 0.010 55);
-  --color-band-rule:   oklch(36.0% 0.014 45);
+  --color-rule:        oklch(89.5% 0.003 260);
+  --color-rule-2:      oklch(93.5% 0.002 260);
+  --color-band-rule:   oklch(32.0% 0.006 260);
 
   /* ---- Accent · the logo, kept to a signal ---- */
   --color-accent:      oklch(64.5% 0.206 38.4);
   --color-accent-deep: oklch(52.0% 0.180 38.4);
-  --color-accent-ink:  oklch(21.0% 0.013 45);
+  --color-accent-ink:  oklch(17.0% 0.006 260);
   --color-focus:       oklch(50.0% 0.200 38.4);
 
   /* ---- Type ---- */
@@ -82,8 +82,8 @@
   --dur-long:  400ms;
 
   /* ---- Depth ---- */
-  --shadow-whisper: 0 1px 2px oklch(21% 0.013 45 / 0.06);
-  --shadow-pill:    0 8px 24px -14px oklch(21% 0.013 45 / 0.30);
+  --shadow-whisper: 0 1px 2px oklch(17% 0.006 260 / 0.06);
+  --shadow-pill:    0 8px 24px -14px oklch(17% 0.006 260 / 0.28);
 
   --z-base:     1;
   --z-raised:   10;
