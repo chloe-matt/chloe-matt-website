@@ -37,9 +37,9 @@
   --color-focus:       oklch(50.0% 0.200 38.4);
 
   /* ---- Type ---- */
-  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
-  --font-body:    "Geist", ui-sans-serif, system-ui, sans-serif;
-  --font-outlier: "Geist Mono", ui-monospace, monospace;
+  --font-display: "Familjen Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body:    "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-outlier: ui-monospace, "SF Mono", Menlo, monospace;
 
   /* Major third, 1.25 */
   --text-xs:      0.8rem;
