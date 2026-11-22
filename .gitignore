@@ -3,3 +3,5 @@ dist/
 .astro/
 .DS_Store
 GUIDELINE.md
+.claude/skills/
+.claude/agents/
