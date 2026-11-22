@@ -5,8 +5,8 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout
-  title="Chloe & Matt — digital products that work in the real world"
-  description="Chloe & Matt OÜ is an Estonian studio building digital products and AI integrations for EU B2B — identity verification, document handling, lead scoring, customer chat — with a written data boundary and a two-person team who own the outcome."
+  title="Chloe & Matt OÜ — Consulting & Contracting Entity of Asep Bagja"
+  description="Chloe & Matt OÜ (Estonian registry no. 14305217) is the Tallinn-based software consultancy and B2B contracting vehicle of product and AI engineer Asep Bagja."
 >
   <Nav slot="nav" />
 
@@ -14,316 +14,53 @@ import Footer from "../components/Footer.astro";
   <section class="hero" id="top">
     <div class="shell hero__grid">
       <div>
-        <h1>We build digital products that work in the real world.</h1>
+        <h1>The consulting &amp; contracting entity of Asep Bagja.</h1>
         <p class="hero__lede">
-          Identity checks, document handling, lead scoring, customer chat — built as
-          deterministic workflows with a written data boundary, and shipped in days.
+          Chloe &amp; Matt OÜ is a registered Estonian software company in Tallinn
+          (reg.&nbsp;14305217). It serves as the B2B contracting and invoicing vehicle
+          for independent engineering and AI integration work delivered personally by
+          <a class="link-arrow" href="https://www.asepbagja.com" rel="noopener">Asep Bagja</a>.
         </p>
         <p class="hero__sub">
-          Tallinn-based. EU-focused. We still do what we always did: small digital
-          products, discovered, built, and launched — clear enough to run yourself.
+          If you saw Chloe &amp; Matt OÜ on a contract, proposal, or invoice, you are in the
+          right place. All consulting inquiries, portfolio work, and writing live on Asep’s
+          personal site.
         </p>
         <div class="hero__actions">
           <a
             class="btn btn--primary"
-            href="mailto:asep@chloeandmatt.eu?subject=Tell%20us%20what%27s%20broken&body=Hi%20Asep%2C%0D%0A%0D%0AHere%27s%20what%27s%20not%20working%20for%20us%3A%0D%0A%0D%0A"
-            >Tell us what’s not working</a
+            href="https://www.asepbagja.com"
+            rel="noopener"
+            >Visit asepbagja.com →</a
           >
-          <a class="link-arrow" href="#work">See our work →</a>
+          <a
+            class="btn btn--secondary"
+            href="mailto:asep@chloeandmatt.eu?subject=Consulting%20enquiry"
+            >Email asep@chloeandmatt.eu</a
+          >
         </div>
       </div>
 
-      <aside class="panel">
-        <p class="panel__q">“Aren’t we not allowed to put client data into AI?”</p>
+      <aside class="panel" id="company">
+        <p class="panel__q">Corporate &amp; billing facts</p>
         <p>
-          You probably are. Under the GDPR, using an AI provider is a <strong>processor</strong> relationship:
-          you need a data processing agreement, and for anything leaving the EEA, either an
-          adequacy decision or standard contractual clauses. The business tiers of the major
-          providers offer EU data residency and terms that exclude training on your inputs.
+          <strong>Legal name:</strong> Chloe &amp; Matt OÜ<br />
+          <strong>Registry code:</strong> 14305217 (Estonian Commercial Register)<br />
+          <strong>Jurisdiction:</strong> Tallinn, Republic of Estonia (EU)<br />
+          <strong>Management board:</strong> Asep Bagja Priandana<br />
+          <strong>Contact:</strong> <a class="link-arrow" href="mailto:asep@chloeandmatt.eu">asep@chloeandmatt.eu</a>
         </p>
         <p>
-          What causes real problems is the free consumer account nobody signed anything for. And
-          if you’re bound by <strong>professional secrecy</strong> — bar rules, accountancy
-          guidance — that’s a separate duty, and it can be stricter than the GDPR.
-        </p>
-        <p>
-          We check both before we build anything, and we write down what goes where.
+          Contracts are signed and invoiced under Estonian and EU commercial law. Every client
+          engagement is scoped, engineered, and handed over directly by Asep — no account
+          managers, no subcontractors, and no junior handoffs.
         </p>
       </aside>
     </div>
   </section>
 
-  <!-- ============ AI integration services ============ -->
-  <section class="ai" id="ai-integration">
-    <div class="shell">
-      <div class="ai__lead">
-        <h2>Work that fits inside your product.</h2>
-        <p class="ai__standfirst">
-          Most EU teams that need an AI feature don’t need an ML team. They need one
-          integration built correctly, with the data path written down before anything ships.
-        </p>
-      </div>
-
-      <div class="ai__gap">
-        <div class="ai__gap-item">
-          <h3>No ML team, and no reason to hire one</h3>
-          <p>
-            Hiring an ML engineer to ship a single verification flow is the wrong shape of
-            cost. The work is integration work: pick the provider, constrain it, wire it into
-            the product you already have, and make the failure cases boring.
-          </p>
-        </div>
-        <div class="ai__gap-item">
-          <h3>Compliance decided first, not retrofitted</h3>
-          <p>
-            Processor agreements, EU data residency, and terms that exclude training on your
-            inputs get settled before the first line of code — alongside professional secrecy
-            duties where they apply. You keep the document that says what goes where.
-          </p>
-        </div>
-        <div class="ai__gap-item">
-          <h3>A small build, not an integration programme</h3>
-          <p>
-            The enterprise alternative is a six-figure quote on a quarterly cadence. Most teams
-            need one workflow, working, this month — priced as a build rather than a retainer,
-            and handed over so you’re not renting it back from us.
-          </p>
-        </div>
-      </div>
-
-      <div class="ai__who">
-        <h3 class="ai__sub">Who this is for</h3>
-        <ul class="ai__seg">
-          <li>
-            <p class="ai__seg-name">Fintech and payments</p>
-            <p class="ai__seg-shape tnum">10–100 people · post-seed to Series A · PSD2 and KYC scope</p>
-            <p class="ai__seg-need">
-              Identity verification and AML screening embedded inside their own product,
-              instead of the checks being rebuilt from scratch.
-            </p>
-          </li>
-          <li>
-            <p class="ai__seg-name">E-commerce and SaaS</p>
-            <p class="ai__seg-shape tnum">5–50 people · fraud pressure and a rising support load</p>
-            <p class="ai__seg-need">
-              Fraud prevention and a customer-facing chatbot at plug-in level, with an API
-              path left open for the logic that turns out to be specific to you.
-            </p>
-          </li>
-          <li>
-            <p class="ai__seg-name">Professional services</p>
-            <p class="ai__seg-shape">Law, accountancy, consulting · bound by professional secrecy</p>
-            <p class="ai__seg-need">
-              Client-facing workflows with deterministic outcomes and an audit trail that a
-              regulator, or a partner, can follow after the fact.
-            </p>
-          </li>
-          <li>
-            <p class="ai__seg-name">Marketplaces</p>
-            <p class="ai__seg-shape tnum">10–200 people · vendors onboarding continuously</p>
-            <p class="ai__seg-need">
-              KYC and KYB across several providers behind one interface, one bill, and the
-              ability to switch provider without rewriting the onboarding flow.
-            </p>
-          </li>
-        </ul>
-      </div>
-
-      <div class="ai__proof">
-        <h3 class="ai__sub">What we can point at</h3>
-        <div class="ai__proof-grid">
-          <article class="ai__proof-item">
-            <h4>Email Verifier — our own integration</h4>
-            <p>
-              A Chloe &amp; Matt reference case. We built a GDPR-first email verifier that checks
-              syntax, domain, MX records, the SMTP handshake, catch-all status, and
-              role-address patterns, then bills only for decisive verdicts — valid, invalid,
-              disposable. Catch-all and unknown results are free, and the false-positive
-              rate is published and dated. Same shape of work, same data discipline, just
-              pointed at ourselves first.
-            </p>
-            <a class="link-arrow" href="/email-verifier/">See how it’s built →</a>
-          </article>
-          <article class="ai__proof-item">
-            <h4>Pistiik OÜ — helping an Estonian verification broker scale identity checks</h4>
-            <p>
-              We built the AI integration behind Pistiik’s identity-verification chatbot.
-              Pistiik is an Estonian KYC/KYB/AML broker that needed a single interface to
-              route each verification request to the right provider. We wired an AI routing
-              layer into their chatbot and email flows so that a user’s check is sent to the
-              provider that matches their geography and document type — KYC from €2.99, KYB
-              from €14.99, pay-per-use with no annual subscription.
-            </p>
-            <p>
-              The result: Pistiik can offer instant verification to startups and fintechs
-              without maintaining provider integrations in-house, and their team can switch
-              or add providers without rewriting the customer-facing flow.
-            </p>
-            <a class="link-arrow" href="https://pistiik.com" rel="noopener">pistiik.com ↗</a>
-          </article>
-        </div>
-      </div>
-
-      <div class="ai__cta">
-        <p>
-          Tell us the workflow, the data it touches, and the deadline. We’ll say whether it’s a
-          two-week integration, a bigger job than you think, or a bad idea.
-        </p>
-        <a
-          class="btn btn--primary"
-          href="mailto:asep@chloeandmatt.eu?subject=AI%20integration%20enquiry&body=Hi%20Asep%2C%0D%0A%0D%0AThe%20workflow%20we%20want%20to%20integrate%3A%0D%0A%0D%0AThe%20data%20it%20touches%3A%0D%0A%0D%0AOur%20deadline%3A%0D%0A%0D%0A"
-          >Describe the integration</a
-        >
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ What we build ============ -->
-  <section class="work band" id="work">
-    <div class="shell">
-      <div class="head-hang">
-        <h2>What we build</h2>
-        <p>
-          Around the integration work, we still run the whole small-product loop: discover,
-          build, market, sell. Each one starts from a real problem and stays small enough to
-          explain in a sentence.
-        </p>
-      </div>
-
-      <div class="work__list">
-        <article class="offer">
-          <div>
-            <h3 class="offer__name">Product discovery</h3>
-            <p class="offer__price tnum">consulting & memos</p>
-          </div>
-          <div class="offer__body">
-            <p>
-              A short discovery engagement: who has the problem, who will pay, what already
-              exists, and whether the idea is worth building. You get a decision memo, not a
-              roadmap.
-            </p>
-            <p class="offer__for">
-              <strong>Good fit:</strong> founders, CEOs, and operators with a use case but no
-              certainty whether it is worth shipping.
-            </p>
-          </div>
-        </article>
-
-        <article class="offer">
-          <div>
-            <h3 class="offer__name">Focused digital products</h3>
-            <p class="offer__price tnum">small, clear builds</p>
-          </div>
-          <div class="offer__body">
-            <p>
-              If discovery says yes, we build a bounded product — not a platform, not a
-              miniature startup inside your company. Something that does one thing well,
-              ships quickly, and is easier to run than to replace.
-            </p>
-            <p class="offer__for">
-              <strong>Good fit:</strong> small capabilities where simpler is better.
-            </p>
-          </div>
-        </article>
-
-        <article class="offer">
-          <div>
-            <h3 class="offer__name">Growth assets</h3>
-            <p class="offer__price tnum">content &amp; launch support</p>
-          </div>
-          <div class="offer__body">
-            <p>
-              A product only matters if people ready to use it can find it. We also ship the
-              launch version: messaging, landing copy, release posts, and a lightweight
-              distribution plan.
-            </p>
-            <p class="offer__for">
-              <strong>Good fit:</strong> teams that want to stay tight and still do the launch
-              half well.
-            </p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ Worked example ============ -->
-  <section class="case">
-    <div class="shell case__grid">
-      <ul class="case__list">
-        <li><b>Rhythm check</b> — a 30-day preview of whether the product actually fits</li>
-        <li><b>Developer handoff</b> — working code plus notes a person can change later</li>
-        <li><b>Launch copy</b> — message, page, and release notes in one pass</li>
-        <li><b>Light support</b> — a window of direct support while adoption settles</li>
-        <li><b>No expansion without review</b> — changes stay small unless both sides agree</li>
-      </ul>
-
-      <div class="case__prose">
-        <h2>This is what a small product engagement looks like</h2>
-        <p>
-          We do not start with a full build. Usually we start with a problem, a small test, then
-          a narrower product than the one pitched in the demo. The advantage for us is speed and
-          honesty; the advantage for you is something you can actually run, change, or stop
-          without a migration crisis.
-        </p>
-        <p>
-          The longer a product lives, the more we care about the boring parts: clarity of
-          interface, quality of default behavior, and how simple the unexpected case looks when
-          it appears at eleven in the evening.
-        </p>
-
-        <h3>Where we’d be careful</h3>
-        <p class="caveat">
-          If the demo is doing work the finished product will not do, we say so. Good software
-          still needs intent to use it. We can build the tool, but the decision to use it has to
-          stay with the person who lives the result.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ How we work ============ -->
-  <section class="how" id="process">
-    <div class="shell how__grid">
-      <div class="head-hang">
-        <h2>How we work</h2>
-        <p>No account managers. No bench of juniors learning on your project.</p>
-      </div>
-
-      <div class="how__items">
-        <div>
-          <h3>Talk to us directly</h3>
-          <p>Message us like a teammate. Replies usually come in hours, not days.</p>
-        </div>
-        <div>
-          <h3>See the work as it happens</h3>
-          <p>We show you what we built and explain the decisions behind it, in plain language.</p>
-        </div>
-        <div>
-          <h3>Straightforward payment</h3>
-          <p>Half up front, half on delivery. For smaller jobs we’ll find something that suits.</p>
-        </div>
-        <div>
-          <h3>Short timelines</h3>
-          <p>Most integrations ship in days. You’ll see something working early.</p>
-        </div>
-        <div>
-          <h3>You own all of it</h3>
-          <p>Code, documentation, deployment notes. If we part ways, you’re not stranded.</p>
-        </div>
-        <div>
-          <h3>We’ll tell you the truth</h3>
-          <p>
-            If something will blow your budget, we say so. If there’s a simpler way, we suggest
-            it. If you don’t need us, we say that too.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ Team ============ -->
-  <section class="who band" id="team">
+  <!-- ============ Principal ============ -->
+  <section class="who band" id="principal">
     <div class="shell who__grid">
       <figure class="who__photo">
         <img
@@ -336,24 +73,35 @@ import Footer from "../components/Footer.astro";
       </figure>
 
       <div class="who__prose">
-        <h2>The people who own the decision</h2>
+        <h2>About the principal</h2>
         <p>
-          Chloe &amp; Matt OÜ is a small software company in Tallinn, Estonia. Asep Bagja is
-          our board member, who signs off on major decisions, provides direction, and sets
-          the tone. He does not build, but he owns the outcome.
+          <strong>Asep Bagja Priandana</strong> is a Tallinn-based product and AI engineer with
+          16+ years of experience shipping production web systems, bounded AI workflows,
+          desktop software, and hardware-software integrations across Europe and Southeast Asia.
         </p>
         <p>
-          We are a two-person studio. Chloe handles strategy and growth; Matt handles
-          engineering. We are Estonian. We are listed in the Estonian business registry
-          (reg. 14305217). GDPR compliance is structural, not contractual.
+          Alongside selective client engagements billed through Chloe &amp; Matt OÜ, he is the
+          founder of <a class="link-arrow" href="https://www.nanas.ee" rel="noopener">Nanas Sound</a>
+          (musical tools and hardware) and
+          <a class="link-arrow" href="https://www.nanas.build" rel="noopener">nanas.build</a>
+          (AI-assisted custom CAD and 3D printing).
         </p>
         <p>
-          We build with AI assistance — we use AI tools to write and review code faster,
-          and we are transparent about that when it matters to a project. But you are
-          working with people. A real person will answer your email, make your calls,
-          and sign your contract.
+          Recent client and reference builds under Chloe &amp; Matt OÜ include the multi-provider
+          AI verification routing layer for Estonian KYC/KYB broker
+          <a class="link-arrow" href="https://pistiik.com" rel="noopener">Pistiik OÜ ↗</a>
+          and outcome-billed GDPR email verification pipelines.
         </p>
         <div class="who__links">
+          <a class="link-arrow" href="https://www.asepbagja.com" rel="noopener"
+            >asepbagja.com ↗</a
+          >
+          <a class="link-arrow" href="https://www.nanas.build" rel="noopener"
+            >nanas.build ↗</a
+          >
+          <a class="link-arrow" href="https://www.nanas.ee" rel="noopener"
+            >nanas.ee ↗</a
+          >
           <a class="link-arrow" href="https://www.linkedin.com/in/asepbagja/" rel="noopener"
             >LinkedIn ↗</a
           >
@@ -361,116 +109,6 @@ import Footer from "../components/Footer.astro";
             >GitHub ↗</a
           >
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ FAQ ============ -->
-  <section class="faq" id="faq">
-    <div class="shell faq__inner">
-      <div class="head-hang">
-        <h2>Questions people actually ask</h2>
-      </div>
-
-      <div class="faq__list">
-        <details class="qa">
-          <summary>Are you a real company I can hire?<span class="qa__sign" aria-hidden="true">+</span></summary>
-          <div class="qa__a">
-            <p>
-              Chloe &amp; Matt OÜ is a registered Estonian company (reg. 14305217). Asep Bagja is
-              our board member. We sign real contracts, invoice through the Estonian system,
-              and you deal with the same people from day one. That is the whole relationship,
-              and it is why we keep builds small.
-            </p>
-          </div>
-        </details>
-
-        <details class="qa">
-          <summary>What does “AI-native” mean for our work together?<span class="qa__sign" aria-hidden="true">+</span></summary>
-          <div class="qa__a">
-            <p>
-              It means we use AI to write and ship code faster, and we are up front about
-              that. It does not change how we work: you get a real person on every call,
-              written data boundaries in every integration, and code you can run yourself.
-              We built one AI integration on our own first — the email verifier — so you
-              can see how we handle data, compliance, and failure cases before we touch
-              yours.
-            </p>
-          </div>
-        </details>
-
-        <details class="qa">
-          <summary>How is this different from an agency?<span class="qa__sign" aria-hidden="true">+</span></summary>
-          <div class="qa__a">
-            <p>
-              We are smaller by design. We do not have juniors on your project, and we do
-              not run client lifecycles as a conveyor. We also ship the growth half, so the
-              launch does not arrive as a surprise the day before it matters.
-            </p>
-          </div>
-        </details>
-
-        <details class="qa">
-          <summary>What does “small product” mean here?<span class="qa__sign" aria-hidden="true">+</span></summary>
-          <div class="qa__a">
-            <p>
-              One clear purpose, one team owning it, and you can explain it in a sentence —
-              including what it will not do. If you need a platform, we will say so.
-            </p>
-          </div>
-        </details>
-
-        <details class="qa">
-          <summary>What do I own at the end?<span class="qa__sign" aria-hidden="true">+</span></summary>
-          <div class="qa__a">
-            <p>
-              Code, copy, documentation, and deployment notes are yours. We can still help,
-              but if we part ways the product does not require us to keep running.
-            </p>
-          </div>
-        </details>
-
-        <details class="qa">
-          <summary>What happens after launch?<span class="qa__sign" aria-hidden="true">+</span></summary>
-          <div class="qa__a">
-            <p>
-              A short support window while adoption settles. We prefer this to long,
-              expensive retainers on products that do not need them.
-            </p>
-          </div>
-        </details>
-
-        <details class="qa">
-          <summary>Do you take every project?<span class="qa__sign" aria-hidden="true">+</span></summary>
-          <div class="qa__a">
-            <p>
-              No. If the demo is doing work the product will not, we will tell you. If the
-              simpler version makes more sense, we will suggest that. An honest “no” is a
-              useful deliverable.
-            </p>
-          </div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ Closing CTA ============ -->
-  <section class="close">
-    <div class="shell close__grid">
-      <div>
-        <h2>Tell us what’s not working</h2>
-        <p>
-          Describe the thing that’s eating your team’s week. We’ll tell you honestly whether we
-          can help, roughly what it would cost, and whether it’s worth doing at all.
-        </p>
-      </div>
-      <div class="close__actions">
-        <a
-          class="btn btn--primary"
-          href="mailto:asep@chloeandmatt.eu?subject=Tell%20us%20what%27s%20broken&body=Hi%20Asep%2C%0D%0A%0D%0AHere%27s%20what%27s%20not%20working%20for%20us%3A%0D%0A%0D%0A"
-          >Email us</a
-        >
-        <a class="btn btn--secondary" href="#work">See our work →</a>
       </div>
     </div>
   </section>
