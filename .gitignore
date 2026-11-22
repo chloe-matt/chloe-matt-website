@@ -5,3 +5,4 @@ dist/
 GUIDELINE.md
 .claude/skills/
 .claude/agents/
+skills-lock.json
